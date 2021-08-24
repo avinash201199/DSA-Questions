@@ -6,5 +6,5 @@
 <details>
 <summary>Array</summary>
 <br>
-[1 Reverse the array 3](https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/)
+[Reverse the array 3] (https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/)
 </details>
