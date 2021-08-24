@@ -6,5 +6,5 @@
 <details>
 <summary>Array</summary><br>
 
-[Reverse the Array 3](http://arisesociety.org/)  
+[1. Reverse the Array 3](http://arisesociety.org/)  
 </details>
