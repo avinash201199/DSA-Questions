@@ -4,7 +4,7 @@
 
 
 <details>
-<summary>Array</summary>
+<summary>Array</summary><br>
 
 [Reverse the Array 3](http://arisesociety.org/)  
 </details>
