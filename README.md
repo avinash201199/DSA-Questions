@@ -13,7 +13,10 @@
 * Make your pull request after adding the program 
 * Wait for review.
 
-After reviewing your code if there will be no changes required then your pull request will be accepted.<br>
+After reviewing your code if there will be no changes required then your pull request will be accepted.<br><br>
+
+You can also contribute to this repository by improving documention or any mistakes/errors
+
 
 Contact for any doubt -https://www.instagram.com/lets__code/
 
