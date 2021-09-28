@@ -12,7 +12,7 @@
 * Make your pull request after adding the program 
 * Wait for review.
 
-Once your code reviewed your pull request will be accepted if there will be no changes required.
+After reviewing your code your if there will be no changes required then your pull request will be accepted.
 
 
 
