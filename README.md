@@ -5,7 +5,8 @@
 ### How to contribute <br>
 
 * Select your topic and program to add in this repository.
-* Fork this repository to your system.
+* Create an issue with description to add question and wait for approval.
+* Then fork this repository.
 * In forked repository select the topic folder where you want to add the program.
 * Then select the programming language folder in which you want to add the program
 * If you can't find the folder create the folder and  then add your program.
