@@ -4,6 +4,7 @@
 
 ### How to contribute 😎<br>
 
+* Star this repository
 * Select your topic and program to add in this repository.
 * Create an issue with description to add question and wait for approval.
 * Then fork this repository.
