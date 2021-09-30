@@ -7,6 +7,7 @@
 * Star this repository
 * Select your topic and program to add in this repository.
 * Create an issue with description to add question and wait for approval.
+* note creat only one issue at once, afer successful pull request create another issue.
 * Then fork this repository.
 * In forked repository select the topic folder where you want to add the program.
 * Then select the programming language folder in which you want to add the program
