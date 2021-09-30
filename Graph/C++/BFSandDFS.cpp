@@ -50,6 +50,22 @@ void bfs(T u)
             }
         }
 }
+void dfs_utility(T src)
+    {
+        map<T,bool> visited;               //use a map to decide whether a node has been visited or not
+        dfs_helper(src,visited);          //the src node is the first node that is input into the graph.
+    }
+    void dfs_helper(T src,map<T,bool> visited)
+    {
+        visited[src]=true;              //As the first node(src node) is where the dfs starts,consider it is already visited(true) 
+        for(auto x:adjList)            //traverse over the pairs present in the adjacency list
+        {
+            if(visited[x.first]==false) //if the node (u) has not been visited
+            {
+                dfs_helper(x.first,visited); //take the unvisited node as the source node and pass the visited map
+            }
+        }
+    }
 };
 
 int main()
