@@ -8,23 +8,23 @@ int main()
   int n,i,k,first_elem,j;  // declaring variables
   cout<<"Enter number of array elements: ";
   cin>>n;
-  int a[n];
+  int ar[n];
   cout<<"Enter the array elements:\n";
   for(i=0;i<n;i++){
-    cin>>a[i];    //initializing the array values.
+    cin>>ar[i];    //initializing the array values.
   }
   cout<<"Enter k: ";
   cin>>k;   //number of elements by which array is to be rotated.
   
   for(i=0;i<k;i++)  //first loop
   {
-    first_elem=a[0]; 
+    first_elem=ar[0]; 
     //shifting array elements to a position prior to them
     for(j=0;j<n-1;j++)  //second loop i.e. nested loop
     {
-      a[j]=a[j+1];
+      ar[j]=ar[j+1];
     }
-    a[j]=first_elem;  //assigning the value of a[0](before rotation) to the last position of the array
+    ar[j]=first_elem;  //assigning the value of a[0](before rotation) to the last position of the array
   }
 
 cout<<endl;
@@ -33,7 +33,7 @@ cout<<endl;
 cout<<"Array after left rotation by k elements:\n "<<endl;  
 for(i=0;i<n;i++)
 {
-  cout<<a[i]<<" ";  
+  cout<<ar[i]<<" ";  
 }
 }
 ```
