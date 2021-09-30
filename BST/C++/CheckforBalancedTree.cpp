@@ -1,3 +1,5 @@
+/*Question statement:A binary tree is given to you.Check if it is height balanced or not.A tree is considered height balanced if 
+difference between heights of left subtrees and right subtrees is not more than 1 for all the nodes present in the tree.*/
 #include <iostream>
 #include<cmath>
 using namespace std;
