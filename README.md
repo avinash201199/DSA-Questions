@@ -2,6 +2,8 @@
 ####  Why DSA is important? DSA plays a very important role in reducing the time complexity of the code. A problem might have several approaches, but you must pick the optimized one in order to stand out of the crowd. You must be able to write a code which takes less time to execute for any problem statement given <br><br>
 <hr>
 
+![Hacktoberfest_Wallpaper_desktop-02](https://user-images.githubusercontent.com/59393136/135513229-89dbc17d-09fc-4dee-90a7-9ec26e4c9e3f.png)
+
 ### How to contribute 😎<br>
 
 * Star this repository
