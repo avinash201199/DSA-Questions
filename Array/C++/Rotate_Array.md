@@ -18,12 +18,13 @@ int main()
   
   for(i=0;i<k;i++)  //first loop
   {
-    first_elem=a[0];
+    first_elem=a[0]; 
+    //shifting array elements to a position prior to them
     for(j=0;j<n-1;j++)  //second loop i.e. nested loop
     {
       a[j]=a[j+1];
     }
-    a[j]=first_elem;  
+    a[j]=first_elem;  //assigning the value of a[0](before rotation) to the last position of the array
   }
 
 cout<<endl;
@@ -35,4 +36,15 @@ for(i=0;i<n;i++)
   cout<<a[i]<<" ";  
 }
 }
+```
+## OUTPUT:
+```c++
+Enter number of array elements: 10
+Enter the array elements:
+12 23 34 45 56 67 78 89 90 19 
+Enter k: 4
+
+Array after left rotation by k elements:
+ 
+56 67 78 89 90 19 12 23 34 45 
 ```
