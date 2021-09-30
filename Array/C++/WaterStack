@@ -1,3 +1,7 @@
+/* It is raining in Pink City. The height of the buildings in the city is given in an array 
+Calculate the amount of water that can be collected between all the buildings */
+
+
 void water(ll n,ll arr[])
 {
        ll left[n],right[n],i;
