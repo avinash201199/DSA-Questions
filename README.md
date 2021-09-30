@@ -21,8 +21,8 @@ After reviewing your code if there will be no changes required then your pull re
 
 You can also contribute to this repository by improving documention or any mistakes/errors <br>
 
-Follow me on Github - https://github.com/avinash201199
-Contact me for any doubt -https://www.instagram.com/lets__code/ <br>
+Follow me on Github - https://github.com/avinash201199 <br>
+Contact me for any doubt -https://www.instagram.com/lets__code/ 
 
 
 
