@@ -55,7 +55,7 @@ void dfs_utility(T src)
         map<T,bool> visited;               //use a map to decide whether a node has been visited or not
         dfs_helper(src,visited);          //the src node is the first node that is input into the graph.
     }
-    void dfs_helper(T src,map<T,bool> visited)
+    void dfs_helper(T src,map<T,bool> &visited)
     {
         visited[src]=true;              //As the first node(src node) is where the dfs starts,consider it is already visited(true) 
         for(auto x:adjList)            //traverse over the pairs present in the adjacency list
@@ -76,7 +76,7 @@ int main()
     {
         g.addEdge(i,i+1,0);
         g.print_adj();
-        g.bfs(i);
+        //g.bfs(i);
     }
    
     return 0;
