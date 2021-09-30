@@ -34,18 +34,18 @@ void bfs(T u)
         map<T,bool> visited;
         
         while(!q.empty())
-        {  T front_element=q.front();//record/store the first element
-            q.pop(); //pop the front element
-            if(!visited[front_element])//visited[front_element]==0 or false  
+        {  T front_element=q.front();
+            q.pop();
+            if(!visited[front_element])  
             {
                 cout<<front_element<<"->";
-                visited[front_element]=true; //if visited map does not have the front_element,make it true
+                visited[front_element]=true; 
             }
-            for(auto x:adjList[front_element])//traverse over the pairs in the list corresponding to front_element
+            for(auto x:adjList[front_element])
             {
-                if(!visited[front_element])   //if front_element is not present in visited(as it is false)
+                if(!visited[front_element])   
                 {
-                    q.push(x.first);          //add the element(u) not traversed yet in the graph inside the queue 
+                    q.push(x.first);           
                 }
             }
         }
