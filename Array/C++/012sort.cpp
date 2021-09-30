@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// Program to sort an Array of 0's, 1's and 2's in O(n) time
+// Also commonly referred to as the Dutch National Flag Problem
+
 void swap_ints(int a, int b, int *arr){
     int temp = arr[a];
     arr[a] = arr[b];
