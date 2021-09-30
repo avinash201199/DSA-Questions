@@ -2,6 +2,8 @@
 #include <climits>
 using namespace std;
 
+// Program to find the maximum subarray sum of an array of positive integers
+// Uses Kadane's algorithm
 
 class Solution{
     public:
