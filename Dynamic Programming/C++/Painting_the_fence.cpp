@@ -1,5 +1,8 @@
-// Given a fence with n posts and k colors, find out the number of ways of painting the fence such that at most 2 adjacent posts have the same color.  
-
+/*
+===========================================================================================================================================================================
+Given a fence with n posts and k colors, find out the number of ways of painting the fence such that at most 2 adjacent posts have the same color.  
+===========================================================================================================================================================================
+*/
 #include <iostream>
 using namespace std;
 
@@ -25,3 +28,8 @@ int main()
   
     cout<<"Number of ways of painting the fence with atmost 2 having same color are " <<solve(a,b);
     return 0;   }
+/* 
+===========================================================================================================================================================================
+
+*/
+    
