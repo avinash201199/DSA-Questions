@@ -4,6 +4,8 @@
 
 ### How to contribute 😎<br>
 
+Note don't create more than 2 issue's on single repo.
+
 * Star this repository
 * Select your topic and program to add in this repository.Don't copy paste ,try to add your codes.
 * Check if the program is already added then choose another.You can add it with different language.
