@@ -7,19 +7,17 @@ Explanation: The first two digits or the last three digits are consecutive 1s. T
 
 class Solution {
     public int findMaxConsecutiveOnes(int[] nums) {
-        int i,count=0,result=0;
-        for(i=0;i<nums.length;i++)
-        {
-            if(nums[i]==0)
-            {
+        int count=0;
+        int max=0;
+        for(int i=0; i<nums.length; i++){
+            if(nums[i]==1){
+                count += 1;
+                max = Math.max(count, max);
+            }
+            else {
                 count=0;
             }
-            else 
-            {
-                count++;
-                result=Math.max(count,result);
-            }
         }
-        return result;
+        return max;
     }
 }
