@@ -1,0 +1,40 @@
+/* It is raining in Pink City. The height of the buildings in the city is given in an array 
+Calculate the amount of water that can be collected between all the buildings */
+
+
+void water(ll n,ll arr[])
+{
+       ll left[n],right[n],i;
+	   left[0]=arr[0];
+	   right[n-1]=arr[n-1];
+	   for(i=1;i<n;i++)
+	   {
+	       left[i]=max(left[i-1],arr[i]);
+	   }
+	   for(i=n-2;i>=0;i--)
+	   {
+	       right[i]=max(right[i+1],arr[i]);
+	   }
+	   ll water=0;
+	   for(i=0;i<n;i++)
+	   {
+	       water+=min(left[i],right[i])-arr[i];
+	   }
+	 cout<<water<<endl;
+}
+int main()
+ {
+	//code
+	ll t,i,n;
+	cin>>t;
+	while(t--)
+	{
+	    cin>>n;
+	    ll arr[n];
+	    for(i=0;i<n;i++)
+	        cin>>arr[i];
+	    water(n,arr);
+	 
+	}
+	return 0;
+}
