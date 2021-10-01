@@ -4,7 +4,7 @@
 
 ### How to contribute 😎<br>
 
-❌ Note : don't create more than 2 issue's on single a repo. <br>
+❌ Note : don't create more than 2 issue's on a single repo. <br>
 ❌ Note : don't make pull request unless you are assigned with the issue.
 
 * Star this repository
