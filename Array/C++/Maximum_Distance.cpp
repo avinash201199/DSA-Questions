@@ -26,7 +26,7 @@ using namespace std;
     {
 	    int arr[]={1,1,2,2,2,1};
 	    int n = sizeof(arr)/sizeof(int);
-	    int sum=maxDistance(arr,n);
-	    cout<<sum;
+	    int ans=maxDistance(arr,n);
+	    cout<<ans;
 	    return 0;
     }
