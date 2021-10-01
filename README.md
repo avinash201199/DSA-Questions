@@ -8,7 +8,7 @@
 
 ❌ Note : don't create more than 2 issue's on a single day. <br>
 ❌ Note : don't make pull request unless you are assigned with the issue.<br>
-❌ Note : while making pull request add issue number also by using # 
+❌ Note : while making pull request add issue number with # (for example #78)
 
 * Star this repository
 * Select your topic and program to add in this repository.Don't copy paste ,try to add your codes.
