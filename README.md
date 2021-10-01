@@ -14,7 +14,7 @@
 * Then select the programming language folder in which you want to add the program
 * If you can't find the folder create the folder and  then add your program.
 * for example check this folder [Array](https://github.com/avinash201199/DSA-Questions/tree/main/Array)
-* Make your pull request after adding the program 
+* Make your pull request with issue number by using # 
 * Wait for review.
 
 After reviewing your code if there will be no changes required then your pull request will be accepted.<br>
