@@ -4,8 +4,8 @@
 
 ### How to contribute 😎<br>
 
-Note : don't create more than 2 issue's on single a repo.
-Note : don't make pull request unless you are assigned with the issue.
+❌ Note : don't create more than 2 issue's on single a repo. <br>
+❌ Note : don't make pull request unless you are assigned with the issue.
 
 * Star this repository
 * Select your topic and program to add in this repository.Don't copy paste ,try to add your codes.
