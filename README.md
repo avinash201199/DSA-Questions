@@ -7,7 +7,8 @@
 * Star this repository
 * Select your topic and program to add in this repository.Don't copy paste ,try to add your codes
 * Create an issue with description to add question and wait for approval.
-* Note create only one issue at once, after successful pull request create another issue.
+* Check if the program is already added then choose another.You can add it with different language.
+* Create an issue with description about the question and wait for approval.
 * Then fork this repository.
 * In forked repository select the topic folder where you want to add the program.
 * Then select the programming language folder in which you want to add the program
@@ -20,8 +21,8 @@ After reviewing your code, if there are no changes required, then your pull requ
 
 You can also contribute to this repository by improving documention or any mistakes/errors <br>
 
-Follow me on Github - https://github.com/avinash201199
-Contact me for any doubt -https://www.instagram.com/lets__code/ <br>
+Follow me on Github - https://github.com/avinash201199 <br>
+Contact me for any doubt -https://www.instagram.com/lets__code/ 
 
 
 
