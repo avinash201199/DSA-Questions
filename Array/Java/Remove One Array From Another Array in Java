@@ -1,0 +1,29 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Main {
+	public static void main(String[] args)
+	{
+		List<Integer> firstList = new ArrayList<>();
+
+		List<Integer> secondList = new ArrayList<>();
+
+		firstList.add(100);
+		firstList.add(200);
+		firstList.add(300);
+		firstList.add(400);
+		firstList.add(500);
+		firstList.add(600);
+
+		secondList.add(300);
+		secondList.add(500);
+
+		System.out.println("elements in first array " + firstList);
+		System.out.println("elements in second array " + secondList);
+		
+    firstList.removeAll(secondList);
+		System.out.println("first array after removing second array from first array\n"
+			+ firstList);
+	}
+}
