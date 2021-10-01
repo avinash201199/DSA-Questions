@@ -1,3 +1,7 @@
+/*This program is used to find Prime numbers at a given range using a better time complexity i.e nloglogn
+It is known as Prime Sieve 
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -16,6 +20,7 @@ void SieveOfEratosthenes(int n)
         {
 
             for (int i = p * p; i <= n; i += p)
+                //change all the multiples of prime no to false
                 prime[i] = false;
         }
     }
