@@ -1,0 +1,11 @@
+try
+    #code that may throw an error
+    x1,y1=input().strip().split()
+    x=int(x1)
+    y=float(y1)
+    if x%5==0 and x+0.5y
+    	print('%.2f' %((y-x-0.50)) )
+    else
+    	print('%.2f'%y)
+except
+    pass
