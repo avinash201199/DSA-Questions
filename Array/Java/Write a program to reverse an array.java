@@ -19,27 +19,14 @@ Output:
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-
-class GFG {
-	public static void main (String[] args) {
-		//code
-		Scanner input=new Scanner(System.in);
-		int t=input.nextInt();
-		for(int i=0;i<t;i++)
-		{
-		  int n=input.nextInt();
-		  int[] array= new int[n];
-		  for(int j=0;j<n;j++)
-		  {
-		      array[j]=input.nextInt();
-		  }
-		  
-		 for(int k=n-1;k>=0;k--){
-		    System.out.print(array[k] + " ");  
-	   
-		}
-		System.out.println();
-		}
-		
-	}
+class Reverse {
+    public void rotate(int[] nums, int k) {
+        int size = nums.length;
+        for (int i = 0; i < k; i++) {
+            int lastVal = nums[size - 1];
+            for (int j = size - 2; j >= 0; j--)
+                nums[j + 1] = nums[j];
+            nums[0] = lastVal;
+        }
+    }
 }
