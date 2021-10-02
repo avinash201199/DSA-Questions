@@ -3,6 +3,24 @@
 #include<vector>
 #define ll long long int
 using namespace std;
+bool checkcow(vector<ll> &stalls,ll numberofcows,ll numberofstalls, ll min_distance)
+{
+ll recent_cow=stalls[0];//Assume that first value is the cow that has been chosen
+ll counter=1;           //counter will be used to break the loop when all cows have been counted
+   for(ll i=1;i<numberofstalls;++i)
+   {
+       if(stalls[i]-recent_cow>=min_distance)
+       {
+           recent_cow=stalls[i];
+            ++counter;
+            if(counter==numberofcows)
+            {
+                return true;
+            }
+       }
+   }
+   return false;
+}
 int main()
 {   int t; 
      cin>>t;
@@ -29,7 +47,7 @@ int main()
        {
            ll mid=(start+end)/2;
            bool cowcanbekept=checkcow(stalls,numberofcows,numberofstalls,mid);
-       if(cowscanbekept==true)//If cows have been placed correctly  
+       if(cowcanbekept==true)//If cows have been placed correctly  
        {
            answer=mid;
            start=mid+1;
