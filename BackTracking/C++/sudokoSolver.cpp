@@ -1,93 +1,81 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#define N 9
 using namespace std;
-
-bool canPlace(int mat[][9], int i, int j, int n, int number){
-
-    //row and column check
-    for (int x = 0; x < n; ++x) {
-        if(mat[x][j] == number || mat[i][x] == number){
-            return false;
-        }
-    }
-
-    //checking in submatrix
-    int rn = sqrt(n);
-    int sx = (i/rn)*rn;
-    int sy = (j/rn)*rn;
-
-    for (int x = sx; x<sx+rn ; ++x) {
-        for (int y = sy; y <sy+rn; ++y) {
-            if(mat[x][y] == number)
-                return false;
-        }
-    }
-
-    return true;
+int grid[N][N] = {
+   {3, 0, 6, 5, 0, 8, 4, 0, 0},
+   {5, 2, 0, 0, 0, 0, 0, 0, 0},
+   {0, 8, 7, 0, 0, 0, 0, 3, 1},
+   {0, 0, 3, 0, 1, 0, 0, 8, 0},
+   {9, 0, 0, 8, 6, 3, 0, 0, 5},
+   {0, 5, 0, 0, 9, 0, 6, 0, 0},
+   {1, 3, 0, 0, 0, 0, 2, 5, 0},
+   {0, 0, 0, 0, 0, 0, 0, 7, 4},
+   {0, 0, 5, 2, 0, 6, 3, 0, 0}
+};
+bool isPresentInCol(int col, int num){ //check whether num is present in col or not
+   for (int row = 0; row < N; row++)
+      if (grid[row][col] == num)
+         return true;
+   return false;
 }
-
-bool solveSudoku(int mat[][9], int i, int j, int n){
-
-    if(i==n){
-        for (int k = 0; k < n; ++k) {
-            for (int l = 0; l < n; ++l) {
-                cout<<mat[k][l]<<" ";
-            }
-            cout<<endl;
-        }
-        return true;
-    }
-
-    //one column ends - shift to next row
-    if(j==n)
-        return solveSudoku(mat,i+1,0,n);
-
-    //skipping pre-filled cells
-    if(mat[i][j]!=0)
-        return solveSudoku(mat,i,j+1,n);
-
-    //recursive case
-    for (int number = 1; number <=n ; ++number) {
-        if(canPlace(mat,i,j,n,number)){
-            mat[i][j] = number;
-
-            bool couldWeSolve = solveSudoku(mat,i,j+1,n);
-
-            if(couldWeSolve)
-                return true;
-
-        }
-    }
-
-    mat[i][j] = 0;
-    return false;
-
+bool isPresentInRow(int row, int num){ //check whether num is present in row or not
+   for (int col = 0; col < N; col++)
+      if (grid[row][col] == num)
+         return true;
+   return false;
 }
-
+bool isPresentInBox(int boxStartRow, int boxStartCol, int num){
+//check whether num is present in 3x3 box or not
+   for (int row = 0; row < 3; row++)
+      for (int col = 0; col < 3; col++)
+         if (grid[row+boxStartRow][col+boxStartCol] == num)
+            return true;
+   return false;
+}
+void sudokuGrid(){ //print the sudoku grid after solve
+   for (int row = 0; row < N; row++){
+      for (int col = 0; col < N; col++){
+         if(col == 3 || col == 6)
+            cout << " | ";
+         cout << grid[row][col] <<" ";
+      }
+      if(row == 2 || row == 5){
+         cout << endl;
+         for(int i = 0; i<N; i++)
+            cout << "---";
+      }
+      cout << endl;
+   }
+}
+bool findEmptyPlace(int &row, int &col){ //get empty location and update row and column
+   for (row = 0; row < N; row++)
+      for (col = 0; col < N; col++)
+         if (grid[row][col] == 0) //marked with 0 is empty
+            return true;
+   return false;
+}
+bool isValidPlace(int row, int col, int num){
+   //when item not found in col, row and current 3x3 box
+   return !isPresentInRow(row, num) && !isPresentInCol(col, num) && !isPresentInBox(row - row%3 ,
+col - col%3, num);
+}
+bool solveSudoku(){
+   int row, col;
+   if (!findEmptyPlace(row, col))
+      return true; //when all places are filled
+   for (int num = 1; num <= 9; num++){ //valid numbers are 1 - 9
+      if (isValidPlace(row, col, num)){ //check validation, if yes, put the number in the grid
+         grid[row][col] = num;
+         if (solveSudoku()) //recursively go for other rooms in the grid
+            return true;
+         grid[row][col] = 0; //turn to unassigned space when conditions are not satisfied
+      }
+   }
+   return false;
+}
 int main(){
-
-    int n;
-    cin>>n;
-
-    int arr[9][9];
-
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            cin>>arr[i][j];
-        }
-    }
-
-    solveSudoku(arr,0,0,n);
-
-return 0;
+   if (solveSudoku() == true)
+      sudokuGrid();
+   else
+      cout << "No solution exists";
 }
-
-//9
-//5 3 0 0 7 0 0 0 0
-//6 0 0 1 9 5 0 0 0
-//0 9 8 0 0 0 0 6 0
-//8 0 0 0 6 0 0 0 3
-//4 0 0 8 0 3 0 0 1
-//7 0 0 0 2 0 0 0 6
-//0 6 0 0 0 0 2 8 0
-//0 0 0 4 1 9 0 0 5
-//0 0 0 0 8 0 0 7 9
