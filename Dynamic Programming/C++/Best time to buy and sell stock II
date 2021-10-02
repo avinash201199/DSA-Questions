@@ -45,7 +45,7 @@ int main()
         cin >> prices[i];
     }
 
-    cout << maxProfit(prices) << endl;;
+    cout << maxProfit(prices) << endl;
 }
 
 // Implemented function for the solution.
