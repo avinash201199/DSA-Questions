@@ -1,0 +1,34 @@
+/*  
+Link:https://leetcode.com/problems/trapping-rain-water/
+Platform:Leetcode
+input:[0,1,0,2,1,0,1,3,2,1,2,1]
+ouput:6.
+  */
+  class Solution {
+public:
+    int trap(vector<int>& height) {
+        int n=height.size(); // compute total size
+        int water=0;// store the totaslWater in ar array
+        
+        vector<int>left(n); // left array to compute biggest tower to the left of  each index
+        vector<int>right(n); // right array to compute biggest tower to the right of  each index
+        
+        int lmax=0; // lmax to mark the biggets tower to the right
+        for(int i=0;i<n;i++) {
+            lmax=max(lmax,height[i]); // either  current index toower will be biggest OR lmax
+            left[i]=lmax; // store the biggest tower 
+        }
+        
+        int rmax=0; // rmax to mark the biggest tower to the right
+        for(int i=n-1;i>=0;i--) { 
+            rmax=max(rmax,height[i]); // either  current index tower will be biggest OR rmax
+            right[i]=rmax; // store the biggest tower 
+        }
+        
+        for(int i=0;i<n;i++) {
+            water+=min(left[i],right[i])-height[i]; // for the current index, pick the smallest tower from left and right and subtract the current height since if there's a tower at the current index of any size, you cannot hold water for that  particular index for that amount of bricks.
+        }
+        
+        return water; // return totalWater
+    }
+};
