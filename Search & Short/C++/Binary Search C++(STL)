@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+
+{  
+
+    
+     int n,b;
+    vector<int>a;
+    cin>>n;
+    for(auto i=0;i<n;i++)
+    {
+        cin>>b;
+        a.push_back(b);
+    }
+    sort(a.begin(),a.end()); //sorts elements
+    int k;
+   
+    cin>>k; // Element to be searched
+  
+    if((binary_search(a.begin(),a.end(),k))){
+        cout<<"Element is found";
+    }
+    else{
+        cout<<"Element is not found";
+    }
+    cout<<'\n';
+
+}
