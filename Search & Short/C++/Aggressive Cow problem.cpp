@@ -29,32 +29,34 @@ int main()
     {
         ll numberofstalls,numberofcows;
         cin>>numberofstalls>>numberofcows;
-        vector<ll> stalls;
+        vector<ll> stalls;//vector of stalls
 
         for(ll i=0;i<numberofstalls;++i)
         {
             ll p;
             cin>>p;
-            stalls.push_back(p);
+            stalls.push_back(p);//Binary Search can be applied on sorted vector 
         }
 
        sort(stalls.begin(),stalls.end());
 
-       ll end=stalls[numberofstalls-1]-stalls[0];
-       ll start=0;
-       ll answer=0;
+       ll end=stalls[numberofstalls-1]-stalls[0];//end is the MAXIMUM DISTANCE we can get between sorted elements of stalls vector
+       //(or the maximum possible search space for applying binarty search)
+       ll start=0;//start variable 
+       ll answer=0;//answer variable
 
        while(start<=end)
        {
-           ll mid=(start+end)/2;
-           bool cowcanbekept=checkcow(stalls,numberofcows,numberofstalls,mid);
+           ll mid=(start+end)/2;//mid is the middle value of start,end
+           bool cowcanbekept=checkcow(stalls,numberofcows,numberofstalls,mid);//returns true if all cows have been placed at
+           //the best possible stalls
        if(cowcanbekept==true)//If cows have been placed correctly  
        {
            answer=mid;
-           start=mid+1;
+           start=mid+1;//check the values from mid+1 till end 
        }
        else{
-           end=mid-1;
+           end=mid-1;//check the values from start till end
           }
        }
        cout<<answer<<'\n';
