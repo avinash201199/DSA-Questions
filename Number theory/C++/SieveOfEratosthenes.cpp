@@ -1,4 +1,4 @@
-// Sieve of Eratosthenes is an efficent way to find all the arr numbers less than or equal to a given integer n
+// Sieve of Eratosthenes is an efficent way to find all the prime numbers less than or equal to a given integer n
 
 #include <iostream>
 #include <cstring>
