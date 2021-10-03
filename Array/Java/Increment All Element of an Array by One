@@ -1,0 +1,23 @@
+public class Main {
+	public static void main(String[] args)
+	{
+		int[] arr = { 50, 25, 32, 12, 6, 10, 100, 150 };
+		int n = arr.length;
+
+		System.out.println("******* BEFORE INCREMENT *******");
+		for (int i = 0; i < n; i++) {
+			System.out.print(arr[i]);
+			System.out.print(" ");
+		}
+		for (int i = 0; i < n; i++) {
+			arr[i] = arr[i] + 1;
+		}
+		System.out.println(" ");
+    
+		System.out.println("******* AFTER INCREMENT *******");
+		for (int i = 0; i < n; i++) {
+			System.out.print(arr[i]);
+			System.out.print(" ");
+		}
+	}
+}
