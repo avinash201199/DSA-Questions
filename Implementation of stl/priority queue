@@ -1,0 +1,38 @@
+/*                                             We are going to implement Max heap and Min heap here by using                                                                    */
+#include <bits/stdc++.h>
+using namespace std;
+void min_heap(){
+     int n;
+     cin>>n;
+    priority_queue<int,vector<int>,greater<int>>pq;
+    int i,j,k,a[n];
+    //Min heap implementation using priority queue
+   for(i=0;i<n;i++){
+       cin>>j;
+       pq.push(j);
+   }
+   while(pq.empty()==false){
+       cout<<pq.top()<<" ";
+       pq.pop();
+   }
+}
+void max_heap(){
+     int n;
+    cin>>n;
+    priority_queue<int>pq;
+    int i,j,k,a[n];
+    //Max heap Implemenetation using priority queue
+    //Min heap implementation
+   for(i=0;i<n;i++){
+       cin>>j;
+       pq.push(j);
+   }
+   while(pq.empty()==false){
+       cout<<pq.top()<<" ";
+       pq.pop();
+   }
+}
+int main(){
+   
+    return 0;
+}
