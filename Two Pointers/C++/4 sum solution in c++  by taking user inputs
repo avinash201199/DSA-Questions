@@ -1,0 +1,69 @@
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+int main(){
+    int n, target;
+    cin>>n>>target;
+    vector<int>nums;
+    int a[n],i,j,cnt=0,count=0;
+    for(i=0;i<n;i++){
+        cin>>a[i];
+        nums.push_back(a[i]);
+    }
+        vector<vector<int>>v;
+        vector<int>l;
+        map<vector<int>,int>mp;
+        sort(nums.begin(),nums.end());
+        int x,y;
+       
+        for(i=0;i<n-2;i++){
+            for(j=i+1;j<n-1;j++){
+                 x=j+1;
+                 y=n-1;
+                while(x<y){
+                    if(nums[x]+nums[y]==(target-nums[i]-nums[j])){
+                     l.push_back(nums[i]);
+                     l.push_back(nums[j]);   
+                     l.push_back(nums[x]);
+                     l.push_back(nums[y]);
+                        mp[l]++;
+                        l.clear();
+                 
+                    }
+                    if(nums[x]+nums[y]>(target-nums[i]-nums[j])){
+                        y--;
+                    }else{
+                        x++;
+                    }
+                }
+               
+            }
+        }
+        
+    cout<<"Number of distinct array whose 4 elements sum is target values are : "<<mp.size()<<"\n";
+    cout<<"Below the arrays are : \n";
+    map<vector<int>,int>::iterator itr=mp.begin();
+    while(itr!=mp.end()){
+      for(i=0;i<itr->first.size();i++){
+          cout<<itr->first[i]<<" ";
+      }
+      cout<<"\n";
+        itr++;
+    }
+  
+    return 0;
+}
+
+
+/*
+Input:->
+6 0
+1 0 -1 0 -2 2
+output:
+Number of distinct array whose 4 elements sum is target values are : 3
+Below the arrays are : 
+-2 -1 1 2 
+-2 0 0 2 
+-1 0 0 1 
+*/
+

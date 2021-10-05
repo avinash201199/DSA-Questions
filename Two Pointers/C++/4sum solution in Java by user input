@@ -1,0 +1,79 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class MAIN
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	int n,target;
+	Scanner sc=new Scanner(System.in);
+	n=sc.nextInt();
+	target=sc.nextInt();
+	int i,j,k,cnt=0;
+	int a[]= new int[n];
+	for(i=0;i<n;i++){
+	    j=sc.nextInt();
+	    a[i]=j;
+	}
+	 ArrayList<ArrayList<Integer>> v = new ArrayList<ArrayList<Integer>>();
+     
+      Arrays.sort(a);
+      //Pick 1st element
+      for (i = 0; i < a.length - 3; i++) {
+        if (i != 0 && a[i] == a[i - 1]) {
+          continue;
+        }
+        
+        for ( j = i + 1; j < a.length - 2; j++) {
+          if (j != i + 1 && a[j] == a[j - 1]) {
+            continue;
+          }
+          
+          int x = j + 1;
+          int y = a.length - 1;
+          while (x < y) {
+            int sum = a[i] + a[j] + a[x] + a[y];
+            if (sum < target) {
+              x++;
+            } else if (sum > target) {
+              y--;
+            } else {
+              ArrayList<Integer> list = new ArrayList<Integer>();
+              list.add(a[i]);
+              list.add(a[j]);
+              list.add(a[x]);
+              list.add(a[y]);
+              v.add(list);
+              x++;
+              y--;
+              while (x < y && a[x] == a[x - 1]) {
+                x++;
+              }
+              while (x < y && a[y] == a[y + 1]){
+                y--;
+              }
+            }
+          }
+        }
+      }
+      System.out.print("Number of unique Array after finding 4sum elements are shown below : ");
+      System.out.println();
+      for(List<Integer> l1 :  v){
+          for(Integer N : l1 ){
+              System.out.print(N + " ");
+          }
+          System.out.println();
+      }
+	}
+}
+/*
+input:
+6 0
+1 0 -1 0 -2 2
+output:
+Unique Array after finding 4sum elements
+-2 -1 1 2 
+-2 0 0 2 
+-1 0 0 1 
+
+*/
