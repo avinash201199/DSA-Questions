@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class car
+{
+    private:
+    int carno,carcost;
+    public:
+    car()
+    {
+        carno=1234;
+    }
+    void show()
+    {
+        cout<<endl<<"car no. is "<<carno<<endl;
+    }
+    friend int carcost(car);
+};
+int carcost(car c)
+{
+    c.carcost=1200000;
+    return c.carcost;
+}
+int main()
+{
+    car c1;
+    c1.show();
+    //cout<<"car no. is "<<carno<<endl;
+    cout<<"car cost is "<<carcost(c1);
+    return 0;
+}
