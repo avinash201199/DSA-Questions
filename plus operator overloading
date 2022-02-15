@@ -1,0 +1,88 @@
+#include<iostream>
+using namespace std;
+class box
+{
+    private:
+    double length,breadth,height;
+
+    public:
+    double getvolume()
+    {
+        return length*breadth*height;
+    }
+    void setlength(double l)
+    {
+        length=l;
+    }
+    void setbreadth(double b)
+    {
+        breadth=b;
+    }
+    void setheight(double h)
+    {
+        height=h;
+    }
+    box operator+(const box&b)
+    {
+        box box;
+        box.length=this->length+b.length;
+        box.breadth=this->breadth+b.breadth;
+        box.height=this->height+b.height;
+        return box;
+    }
+    box operator-(const box&m)
+    {
+        box box;
+        box.length=this->length-m.length;
+        box.breadth=this->breadth-m.breadth;
+        box.height=this->height-m.height;
+        return box;
+    }
+};
+int main()
+{
+    double vol1,vol2,vol3,vol4,vol5;
+    box box1;
+    box box2;
+    box box3;
+    box box4;
+    box box5;
+    box1.setlength(2.5);
+    box1.setbreadth(5.5);
+    box1.setheight(7.5);
+
+    box2.setlength(12.5);
+    box2.setbreadth(15.5);
+    box2.setheight(17.5);
+
+    box4.setlength(2.5);
+    box4.setbreadth(1.5);
+    box4.setheight(1.5);
+
+    vol1=box1.getvolume();
+    vol2=box2.getvolume();
+    vol4=box4.getvolume();
+    cout<<endl<<"box1 volume is "<<vol1<<endl;
+    cout<<"box2 volume is "<<vol2<<endl;
+    cout<<"box4 volume is "<<vol4<<endl;
+
+    box3=box1+box2+box4;
+    vol3=box3.getvolume();
+    box5=box2-box1;
+    vol5=box5.getvolume();
+    cout<<endl<<"overloads unuary + operator:"<<endl;
+    cout<<"box3 volume is "<<vol3<<endl; //box3=box1+box2+box4
+    cout<<endl<<"overloads unuary - operator:"<<endl;
+    cout<<"box5 volume is "<<vol5<<endl; //box5=box2-box1
+    
+    cout<<endl<<"overloads [] operator:"<<endl;
+    int intArray[1024];
+    for (int i = 0, j = 0; i < 1024; i++) 
+    {
+        intArray[i] = j++;
+    }
+    // 512
+    cout << intArray[512] << endl;
+    // 257
+    cout << 257 [intArray] << endl;
+}
