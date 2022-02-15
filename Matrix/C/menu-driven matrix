@@ -1,0 +1,190 @@
+#include<stdio.h>
+int insertion(int a[50],int n,int new, int position);
+int deletion(int a[50],int n,int del);
+int searching(int a[],int size,int search);
+int sort(int a[50],int n);
+
+int main()
+{
+    int end=0;
+    for(int x=0;x<50;x++)
+    {
+        printf("\npress 1 for insertion\n");
+        printf("press 2 for deletion\n");
+        printf("press 3 for searching\n");
+        printf("press 4 for sorting\n");
+        printf("press 5 for traversing\n");
+        printf("press 6 for exit\n");
+        int ch;
+        printf("Enter your choice:");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+            {
+                int n,a[50],new,position;
+                printf("\nenter the number of elements of an array:");
+                scanf("%d",&n);
+                printf("\nenter the elements of array:");
+                for(int i=0;i<n;i++)
+                {
+                    scanf("%d",&a[i]);
+                }
+                printf("\nenter the number to be inserted:");
+                scanf("%d",&new);
+                printf("\nenter the position to insert the number:");
+                scanf("%d",&position);
+                insertion(a,n,new,position);
+                break;
+            }
+            case 2:
+            {
+                int n,a[50],del;
+                printf("\nenter the number of elements of an array:");
+                scanf("%d",&n);
+                printf("\nenter the elements of an array in ascending order:");
+                for(int i=0;i<n;i++)
+                {
+                    scanf("%d",&a[i]);
+                }
+                printf("\nenter the number to be deleted:");
+                scanf("%d",&del);
+                deletion(a,n,del);
+                break;
+            }
+            case 3:
+            {
+                int a[100],n,i,s;
+                printf("\nenter the number of elements:");
+                scanf("%d",&n);
+                printf("enter the elements:");
+                for(i=0;i<n;i++)
+                {
+                    scanf("%d",&a[i]);
+                }
+                printf("enter the elements to be search:");
+                scanf("%d",&s);
+                searching(a,n,s);
+                break;
+            }
+            case 4:
+            {
+                int n,a[50];
+                printf("\nenter the number of elements in an array:");
+                scanf("%d",&n);
+                printf("enter the elements:");
+                for(int i=0;i<n;i++)
+                {
+                    scanf("%d",&a[i]);
+                }
+                sort(a,n);
+                break;
+            }
+            case 5:
+            {
+                int a[50],n;
+                printf("\nenter the number of elements:");
+                scanf("%d",&n);
+                printf("Enter the elements of an array:");
+                for(int i=0;i<n;i++)
+                {
+                    scanf("%d",&a[i]);
+                }
+                printf("the array elements:\n");
+                for(int i=0;i<n;i++)
+                {
+                    printf("array[%d]->%d \n",i,a[i]);
+                }
+                break;
+            }
+            case 6:
+            {
+                printf("EXIT");
+                end++;
+            }
+        }
+        if(end==1)
+        {
+            break;
+        }
+    }
+    return 0;
+}
+int insertion(int a[50],int n,int new, int position)
+{
+    printf("current list:\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    for(int i=n;i>=position;i--)
+    {
+        a[i]=a[i-1];
+    }
+    a[position-1]=new;
+    printf("\ninserted array:\n");
+    for(int i=0;i<=n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+}
+int deletion(int a[50],int n,int del)
+{
+  printf("current list:\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]>=del)
+        {
+            a[i]=a[i+1];
+        }
+    }
+    printf("\ndeleted array:\n");
+    for(int i=0;i<n-1;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\n");  
+}
+int searching(int a[],int size,int search)
+{
+    for(int i=0;i<size;i++)
+    {
+        if(a[i]==search)
+        {
+            printf("element found in a array at position %d",i+1);
+            break;
+        }
+        else if(i==search)
+        {
+            printf("element not is array");
+        }
+    }
+    printf("\n");
+}
+int sort(int a[50],int n)
+{
+    int swap;
+    for(int i=0;i<n;i++)
+    {
+        for(int k=0;k<n-1;k++)
+        {
+           if(a[k]>a[k+1])
+           {
+              swap=a[k];
+              a[k]=a[k+1];
+              a[k+1]=swap;
+           }
+        }
+    }
+    printf("sorted array:\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+}
