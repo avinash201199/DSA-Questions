@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include <stdlib.h>
+struct node
+{
+    int data;
+    struct node *next,*pre;
+};
+void add(struct node** head,int value)
+{
+    struct node* n1=malloc(sizeof(struct node));
+    if(*head==NULL)
+    {
+        n1->data=value;
+        n1->next=NULL;
+        n1->pre=NULL;
+        *head=n1;
+    }
+    else
+    {
+        n1->data=value;
+        n1->next=(*head);
+        n1->pre=NULL;
+        *head=n1;
+        (*head)->pre=n1;         //previous pointer of existing node will point towards the new node to be inserted
+    }
+}
+void print(struct node* head)
+{
+    struct node *temp;
+    printf("data:\n");
+    while(temp!=NULL)
+    {
+        printf("%d \n",temp->data);
+        temp=temp->next;
+    }
+    printf("NULL \n");
+}
+int main()
+{
+    int n,value;
+    struct node* head=NULL;
+    printf("enter the number of elements:");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        printf("enter the %d value:",i+1);
+        scanf("%d",&value);
+        add(&head,value);
+    }
+    print(head);
+    return 0;
+}
