@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+class worker
+{
+    protected:
+    int age;
+    char name[20];
+    public:
+    void get()
+    {
+        cout<<"enter the name:";
+        cin>>name;
+        cout<<"enter the age:";
+        cin>>age;
+    }
+    void show()
+    {
+        cout<<"***************************************************************";
+        cout<<endl<<"name:"<<name<<endl;
+        cout<<"age:"<<age<<endl;
+    }
+};
+class manager:public worker
+{
+    protected:
+    int number_of_workers;
+    public:
+    void get1()
+    {
+        cout<<"enter the number of workers:";
+        cin>>number_of_workers;
+    }
+    void show1()
+    {
+        cout<<"number of workers:"<<number_of_workers<<endl;
+    }
+};
+class ceo: public manager
+{
+    protected:
+    int no_of_managers;
+    public:
+    void get2()
+    {
+        cout<<"enter the number of managers:";
+        cin>>no_of_managers;
+    }
+    void show2()
+    {
+        cout<<"number of managers:"<<no_of_managers<<endl;
+    }
+};
+int main()
+{
+    ceo obj;
+    obj.get();
+    obj.get1();
+    obj.get2();
+    obj.show();
+    obj.show1();
+    obj.show2();
+    return 0;
+}
