@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capabilities>
+	<capability name="Facelets">
+		<library name="facelets" />
+		<conflicting-library name="jsf-facelets.jar"/>
+		<file-addition file-name="/WEB-INF/web.xml"
+			label="Refresh Period Parameter" x-path="/web-app">
+			<![CDATA[<context-param> 
+  <param-name>facelets.REFRESH_PERIOD</param-name> 
+  <param-value>2</param-value> 
+</context-param>]]>
+		</file-addition>
+		<file-addition file-name="/WEB-INF/web.xml"
+			label="Default Sufix Parameter" x-path="/web-app">
+			<![CDATA[<context-param>
+  <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+  <param-value>.xhtml</param-value>
+</context-param>]]>
+		</file-addition>
+		<file-addition file-name="/WEB-INF/faces-config.xml"
+			label="View Handler" x-path="/faces-config/application">
+			<![CDATA[<view-handler>com.sun.facelets.FaceletViewHandler</view-handler>]]>
+		</file-addition>
+	</capability>
+	<capability name="JBoss RichFaces 3.3">
+		<library name="RichFaces3.3" />
+		<conflicting-library name="richfaces-api-3.3.*"/>
+		<file-addition file-name="/WEB-INF/web.xml"
+			label="Skin Parameter" x-path="/web-app">
+			<![CDATA[<context-param>
+  <param-name>org.ajax4jsf.SKIN</param-name>
+  <param-value>classic</param-value>
+</context-param>]]>
+		</file-addition>
+		<file-addition file-name="/WEB-INF/web.xml"
+			label="Ajax4jsf Filter" x-path="/web-app">
+			<![CDATA[<filter>
+  <display-name>Ajax4jsf Filter</display-name>
+  <filter-name>ajax4jsf</filter-name>
+  <filter-class>org.ajax4jsf.Filter</filter-class>
+</filter>]]>
+		</file-addition>
+		<file-addition file-name="/WEB-INF/web.xml"
+			label="Ajax4jsf Filter mapping" x-path="/web-app">
+			<![CDATA[<filter-mapping>
+  <filter-name>ajax4jsf</filter-name>
+  <servlet-name>Faces Servlet</servlet-name>
+  <dispatcher>REQUEST</dispatcher>
+  <dispatcher>FORWARD</dispatcher>
+  <dispatcher>INCLUDE</dispatcher>
+</filter-mapping> ]]>
+		</file-addition>
+	</capability>
+	<capability name="JBoss RichFaces 3.1">
+		<library name="RichFaces3.1" />
+		<conflicting-library name="richfaces-api-3.1.*"/>
+		<file-addition file-name="/WEB-INF/web.xml"
+			label="Skin Parameter" x-path="/web-app">
+			<![CDATA[<context-param>
+  <param-name>org.ajax4jsf.SKIN</param-name>
+  <param-value>classic</param-value>
+</context-param>]]>
+		</file-addition>
+		<file-addition file-name="/WEB-INF/web.xml"
+			label="Ajax4jsf Filter" x-path="/web-app">
+			<![CDATA[<filter>
+  <display-name>Ajax4jsf Filter</display-name>
+  <filter-name>ajax4jsf</filter-name>
+  <filter-class>org.ajax4jsf.Filter</filter-class>
+</filter>]]>
+		</file-addition>
+		<file-addition file-name="/WEB-INF/web.xml"
+			label="Ajax4jsf Filter mapping" x-path="/web-app">
+			<![CDATA[<filter-mapping>
+  <filter-name>ajax4jsf</filter-name>
+  <servlet-name>Faces Servlet</servlet-name>
+  <dispatcher>REQUEST</dispatcher>
+  <dispatcher>FORWARD</dispatcher>
+  <dispatcher>INCLUDE</dispatcher>
+</filter-mapping> ]]>
+		</file-addition>
+	</capability>
+</capabilities>

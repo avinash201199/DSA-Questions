@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://java.sun.com/jstl/fmt">
+    <tag name="requestEncoding"/>
+    <tag name="setLocale"/>
+    <tag name="timeZone"/>
+    <tag name="setTimeZone"/>
+    <tag name="bundle">
+    	<helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.fmt.BundleHelper"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="setBundle"/>
+    <tag name="message">
+    	<helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.fmt.MessageHelper"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="param"/>
+    <tag name="formatNumber"/>
+    <tag name="parseNumber"/>
+    <tag name="formatDate"/>
+    <tag name="parseDate"/>
+  </taglib>
+</jsp-preview-template> 

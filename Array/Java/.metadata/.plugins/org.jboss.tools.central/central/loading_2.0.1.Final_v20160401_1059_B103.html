@@ -1,0 +1,15 @@
+<head><meta charset="utf-8"><title>Red Hat Central</title></head>
+<body><div style="color:#666666; font-size:small;font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif">Loading Red Hat Central, please wait <span id="ellipsis"></span></div></body>
+<script>
+var ellipsis = document.getElementById("ellipsis");
+var idx = 1;
+function updateEllipsis() {
+	var txt = "";
+	for (i=0;i<idx;i++) { txt+=".";}
+	ellipsis.innerHTML=txt;
+	if ( ++idx>3 ) { idx=0;}
+	setTimeout(function () { updateEllipsis();}, 500);	
+}
+updateEllipsis();
+</script>
+</html>

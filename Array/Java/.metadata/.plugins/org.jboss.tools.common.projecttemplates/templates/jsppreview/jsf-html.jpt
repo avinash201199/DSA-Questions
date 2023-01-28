@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://java.sun.com/jsf/html">
+    <tag name="form">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="styleClass" rename="class"/><![CDATA[
+<form method="post" $tag.processAttributes()>
+$tag.processBody()
+</form>
+]]></tag>
+    <tag name="outputText">
+	    <attribute name="styleClass" rename="class"/><![CDATA[
+<span $tag.processAttributes()>
+#if ($tag.getAttribute('value'))
+$tag.getAttribute('value')
+#end
+#if ($tag.getAttribute('binding'))
+$tag.getAttribute('binding')
+#end
+</span>
+]]></tag>
+    <tag name="outputFormat">
+   	    <attribute name="styleClass" rename="class"/>
+   	    <helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.OutputFormat"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="outputLabel">
+   	    <attribute name="styleClass" rename="class"/><![CDATA[
+<label $tag.processAttributes()>
+#if ($tag.getAttribute('value'))
+$tag.getAttribute('value')
+#end
+$tag.processBody()
+</label>
+]]></tag>
+    <tag name="inputText">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/><![CDATA[
+<input type="text" $tag.processAttributes()>
+]]></tag>
+    <tag name="inputSecret">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/><![CDATA[
+<input type="password" $tag.processAttributes()>
+]]></tag>
+    <tag name="inputTextarea">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="styleClass" rename="class"/><![CDATA[
+<textarea $tag.processAttributes()>
+#if ($tag.getAttribute('value'))
+$tag.getAttribute('value')
+#end
+#if ($tag.getAttribute('binding'))
+$tag.getAttribute('binding')
+#end
+</textarea>
+]]></tag>
+    <tag name="inputHidden">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="styleClass" rename="class"/><![CDATA[
+<input type="hidden" $tag.processAttributes()>
+]]></tag>
+    <tag name="selectOneMenu">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/>
+	    <helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.SelectOneMenu"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="selectManyMenu">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/>
+	    <helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.SelectManyMenu"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="selectOneListbox">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/>
+	    <helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.SelectOneListbox"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="selectManyListbox">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/>
+	    <helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.SelectManyListbox"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="selectOneRadio">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/>
+	    <helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.SelectOneRadio"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="selectBooleanCheckbox">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/><![CDATA[
+<input type="checkbox" $tag.processAttributes()>
+]]></tag>
+    <tag name="selectManyCheckbox">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/>
+	    <helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.SelectManyCheckbox"/><![CDATA[
+$helper.execute()
+]]></tag>
+    <tag name="commandButton">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="binding" rename="value"/>
+	    <attribute name="styleClass" rename="class"/><![CDATA[
+<input type="submit" $tag.processAttributes()>
+]]></tag>
+    <tag name="commandLink">
+	    <attribute name="id" rename="name"/>
+		<attribute name="styleClass" rename="class"/><![CDATA[
+<a href="#" $tag.processAttributes()>$tag.processBody()</a>
+]]></tag>
+    <tag name="outputLink">
+	    <attribute name="id" rename="name"/>
+		<attribute name="styleClass" rename="class"/><![CDATA[
+<a href="$tag.getAttribute('value')" $tag.processAttributes()>$tag.processBody()</a>
+]]></tag>
+    <tag name="message"/>
+	<tag name="graphicImage">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="styleClass" rename="class"/>
+    	<attribute name="value" rename="src" type="url"/>
+    	<attribute name="url" rename="src" type="url"/><![CDATA[
+<img 
+#if ($tag.getAttribute('binding'))
+ src="$tag.getPreviewPictureURL('default')"
+#end
+$tag.processAttributes() />
+]]></tag>
+    <tag name="messages"/>
+	<tag name="graphicImage">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="styleClass" rename="class"/>
+    	<attribute name="value" rename="src" type="url"/>
+    	<attribute name="url" rename="src" type="url"/><![CDATA[
+<img 
+#if ($tag.getAttribute('binding'))
+ src="$tag.getPreviewPictureURL('default')"
+#end
+$tag.processAttributes() />
+]]></tag>
+<!--
+	<tag name="graphicImage">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="styleClass" rename="class"/>
+    	<attribute name="value" type="url"/>
+    	<attribute name="url" type="url"/>
+    	<helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.GraphicImage"/><![CDATA[
+$helper.execute()
+]]></tag>
+-->
+    <tag name="panelGrid">
+	    <attribute name="id" rename="name"/>
+	    <attribute name="styleClass" rename="class"/>
+    	<helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.PanelGrid"/><![CDATA[
+$helper.execute()
+]]></tag>
+	<tag name="panelGroup"><![CDATA[
+#if ($tag.getAttribute('styleClass'))
+<span class="$tag.getAttribute('styleClass')" $tag.processAttributes()>
+#end
+$tag.processBody()
+#if ($tag.getAttribute('styleClass'))
+</span>
+#end
+]]></tag>
+    <tag name="dataTable">
+	    <attribute name="styleClass" rename="class"/>
+    	<helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.h.DataTable"/><![CDATA[
+$helper.execute()
+]]></tag>
+  </taglib>
+</jsp-preview-template>

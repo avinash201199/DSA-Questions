@@ -1,0 +1,6 @@
+<PrefixMappings>
+	<PrefixMapping name="html-el" target="html"/>
+	<PrefixMapping name="logic-el" target="logic"/>
+	<PrefixMapping name="bean-el" target="bean"/>
+
+</PrefixMappings>

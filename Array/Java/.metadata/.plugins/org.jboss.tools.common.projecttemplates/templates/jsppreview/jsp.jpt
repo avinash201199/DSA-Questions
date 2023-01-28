@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://java.sun.com/JSP/Page">
+    <tag name="root"><![CDATA[$tag.processBody()]]></tag>
+    <tag name="text"><![CDATA[$tag.getValue()]]></tag>
+    <tag name="directive.page"/>
+    <tag name="scriptlet"><![CDATA[<!--$tag.getValue()-->]]></tag>
+    <tag name="expression">$tag.getValue()</tag>
+  </taglib>
+</jsp-preview-template> 

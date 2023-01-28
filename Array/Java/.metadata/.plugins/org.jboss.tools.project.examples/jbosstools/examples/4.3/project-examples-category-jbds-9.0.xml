@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categories>
+  <category name="Web Applications" description="These quickstarts are aimed to get you up to writing web applications with minimal fuss." priority="1" />
+  <category name="Mobile Applications" description="These quickstarts are aimed to get you up to writing mobile applications with minimal fuss." priority="2" />
+  <category name="Back-end Applications" description="These quickstarts are aimed to get you up to writing back-end applications with minimal fuss." priority="3" />
+  <category name="JBoss Quickstarts" description="These quickstarts are aimed to get you up to writing applications with minimal fuss. We recommend that you work through the quickstarts in the order they are presented in this guide, however if you have previous experience with Java EE 6, you may wish to skip some or all of the quickstarts."
+  priority="5" />
+  <category name="JBoss Maven Archetypes" priority="6" />
+  <category name="GateIn Portal Quickstarts" description="GateIn Portal Quickstarts" priority="10" />
+  <category name="Portal Applications" description="Portal Applications" priority="11" />
+</categories>

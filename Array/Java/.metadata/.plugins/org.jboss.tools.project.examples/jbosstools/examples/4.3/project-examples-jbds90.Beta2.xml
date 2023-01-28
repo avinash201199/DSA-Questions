@@ -1,0 +1,48 @@
+<projects>
+  <project>
+    <category>Mobile Applications</category>
+    <name>contacts-mobile-basic</name>
+    <included-projects>contacts-mobile-basic-client, contacts-mobile-basic-services</included-projects>
+    <shortDescription>contacts-mobile-basic</shortDescription>
+    <description>This example contains : - contacts-mobile-basic-services : a Maven-based Java EE 6 web application, acting as a REST service back-end - contacts-mobile-basic-client : an Apache Cordova-based client project, deployed on a mobile device First, deploy
+      contacts-mobile-basic-services to a JBoss EAP 6 server, so that it exposes : http://localhost:8080/contacts-mobile-basic-services/rest/members Then, build and deploy contacts-mobile-basic-client as a Mobile device client, using JBoss Hybrid Mobile
+      Application Development Tools. This client application performs GET, PUT, POST and DELETE queries to the REST service.</description>
+    <importType>maven</importType>
+    <icon path="icons/jboss.png" />
+    <tags>central</tags>
+    <size>7340236</size>
+    <url>http://dl.bintray.com/jbosstools/examples/contacts-mobile-basic/0.0.2/contacts-mobile.zip</url>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.70,org.jboss.ide.eclipse.as.runtime.wildfly.80,org.jboss.ide.eclipse.as.runtime.wildfly.90, org.jboss.ide.eclipse.as.runtime.wildfly.100</property>
+        <property name="description">Requires JBoss EAP 6, JBoss AS 7.1 or WildFly 8.x/9.x</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">Requires m2e &gt;= 1.0.</property>
+        <property name="connectorIds">org.eclipse.m2e.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[0.16,2.0)</property>
+        <property name="description">Requires m2e-wtp &gt;= 1.1.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.3.0,2.0.0)</property>
+        <property name="description">Requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.jaxrs.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.thym.core</property>
+        <property name="versions">[0.1.0,1.0.0)</property>
+        <property name="description">Requires Eclipse Hybrid Mobile Tools.</property>
+        <property name="connectorIds">org.jboss.tools.aerogear.hybrid</property>
+      </fix>
+    </fixes>
+    <essentialEnterpriseDependencies>org.jboss.bom.wfk:jboss-javaee-6.0-with-tools:pom:2.4.0-redhat-2,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-9</essentialEnterpriseDependencies>
+  </project>
+</projects>

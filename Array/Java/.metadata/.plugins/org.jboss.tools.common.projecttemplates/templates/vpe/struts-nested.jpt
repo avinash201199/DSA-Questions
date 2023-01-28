@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://jakarta.apache.org/struts/tags-nested">
+    <tag name="message">$tag.getAttribute('key')</tag>
+    <tag name="write">${tag.getAttribute('name')}.$tag.getAttribute('property')</tag>
+    <tag name="checkbox"><![CDATA[
+<input type="checkbox" $tag.processAttributes()>
+]]></tag>
+    <tag name="errors"><![CDATA[
+$tag.processBody()
+]]></tag>
+    <tag name="file"><![CDATA[
+<input type="file" $tag.processAttributes()>
+]]></tag>
+    <tag name="form"><![CDATA[
+<form $tag.processAttributes()>
+$tag.processBody()
+</form>
+]]></tag>
+    <tag name="hidden"><![CDATA[
+<input type="hidden" $tag.processAttributes()>
+]]></tag>
+    <tag name="image">
+      <attribute name="page" rename="src"/><![CDATA[
+<img $tag.processAttributes()>
+]]></tag>
+    <tag name="img">
+      <attribute name="page" rename="src"/><![CDATA[
+<img $tag.processAttributes()>
+]]></tag>
+    <tag name="link">
+      <attribute name="page" rename="href"/>
+      <attribute name="forward" rename="href"/><![CDATA[
+<a $tag.processAttributes()>$tag.processBody()</a>
+]]></tag>
+    <tag name="messages"><![CDATA[
+messages
+]]></tag>
+    <tag name="multibox"><![CDATA[
+<input type="checkbox" $tag.processAttributes()>
+]]></tag>
+    <tag name="options"><![CDATA[
+<option $tag.processAttributes()>$tag.getAttribute('property') collection</option>
+]]></tag>
+    <tag name="optionsCollection"/>
+    <tag name="password"><![CDATA[
+<input type="password" $tag.processAttributes() value="$tag.processBody()">
+]]></tag>
+    <tag name="radio"><![CDATA[
+<input type="radio" $tag.processAttributes()>
+]]></tag>
+    <tag name="select"><![CDATA[
+<select $tag.processAttributes()>
+$tag.processBody()
+</select>
+]]></tag>
+    <tag name="submit"><![CDATA[
+<input type="submit" $tag.processAttributes() value="$tag.processBody()">
+]]></tag>
+    <tag name="text"><![CDATA[
+<input type="text" $tag.processAttributes()>
+]]></tag>
+    <tag name="textarea"><![CDATA[
+<textarea $tag.processAttributes()>
+$tag.processBody()
+</textarea>
+]]></tag>
+  </taglib>
+</jsp-preview-template> 

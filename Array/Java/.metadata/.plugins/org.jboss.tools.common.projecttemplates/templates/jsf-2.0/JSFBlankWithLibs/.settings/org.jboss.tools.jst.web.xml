@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<file-systems application-name="" model-entity="FileSystems" WORKSPACE_HOME="./WebContent/WEB-INF">
+ <file-system model-entity="FileSystemFolder" location="%workspace.home%" NAME="WEB-INF"/>
+ <file-system model-entity="FileSystemFolder" INFO="Content-Type=Web"
+  location="%workspace.home%/.." NAME="WEB-ROOT"/>
+ <file-system model-entity="FileSystemFolder"
+  location="%workspace.home%/../../JavaSource" NAME="src"/>
+ <file-system model-entity="FileSystemFolder"
+  location="%workspace.home%/lib" NAME="lib"/>
+ <file-system model-entity="FileSystemFolder"
+  location="%workspace.home%/classes" NAME="classes"/>
+ <file-system model-entity="FileSystemFolder"
+  location="%workspace.home%/../../ant" NAME="build"/>
+ <WEB model-entity="JstWeb" MODEL_PATH="/web.xml">
+  <MODULE model-entity="WebJSFModule" MODEL_PATH="/faces-config.xml"
+   ROOT="WEB-ROOT" SRC="src" URI="/WEB-INF/faces-config.xml"/>
+ </WEB>
+</file-systems>

@@ -1,0 +1,130 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>JBoss Central</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+  <link rel="stylesheet" href="css/jboss-app.css">
+</head>
+<body>
+  <div id="settingsContainer">
+ 	 <div class="settings" data-toggle="popover">
+  		<span class="glyphicon glyphicon-cog"></span>
+  	</div>
+  	<div class="popper-content"><p style="white-space: nowrap;">
+  	<input type="checkbox" id="showOnStartup" onclick="closePopover(this);" class="showOnStartup"/>
+  	<span>Open on Start up</span></p></div>
+   </div>
+   <div class="jumbotron">
+    <div class="container">
+      <h2>Welcome to JBoss!</h2>
+      <div id="buzz-carousel" class="carousel slide vertical">
+        <!-- Carousel items -->
+        <div id="buzz" class="carousel-inner">
+          <div class="active item">
+               <p>Brand new?  Try our <a href="http://www.jboss.org/ticket-monster/" class="external">TicketMonster</a> tutorial.</p>
+           </div>
+        </div>
+      </div>
+
+      <div class="row search-row">
+        <div class="col-md-6 col-sm-9 col-xs-9 search-area">
+          <form id="search-form">
+            <div class="form-group" id="searchBar">
+              <label class="control-label sr-only" for="search">Search</label>
+              <input class="form-control input-lg has-clear" id="search" type="text" placeholder="Search project starters (ex: JPA, REST, Angular)">
+              <div class="input-clear form-control-feedback" id="clearSearch"><a href="#"><span class="glyphicon glyphicon glyphicon-remove-sign"></span>clear search</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /jumbotron -->
+
+  <div id="results" class="container-results results hidden">
+    <div class="container">
+
+      <nav>
+        <ul class="pager">
+          <li class="previous"><a href="index.html"><span aria-hidden="true">&lt;</span> back</a></li>
+        </ul>
+      </nav>
+
+      <div id="resultList" class="list-group"></div>
+
+      <!-- /list-group -->
+
+      <nav class="pull-right">
+        <ul id="pagination-results" class="pagination"></ul>
+      </nav>
+
+
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /container-results -->
+
+
+  <div id="home"  class="home">
+  <div class="home-icons">
+    <div class="container">
+      <!-- icons -->
+      <div class="row">
+        <div class="col-xs-4 col-md-4">
+          <a id="addtools" href="#addtools" class="icon-left" title="Add tools">
+            <div class="icon-addtools"></div>
+            <!--
+            <p>Add tools</p>
+          -->
+          </a>
+        </div>
+        <div class="col-xs-4 col-md-4">
+          <a href="http://www.jboss.org/get-started/" class="icon-mid external" title="Learn about JBoss">
+            <div class="icon-info"></div>
+            <!--
+            <p>Learn about JBoss</p>
+          -->
+          </a>
+        </div>
+        <div class="col-xs-4 col-md-4">
+          <a href="http://tools.jboss.org/cat/" class="icon-right external" title="Get involved">
+            <div class="icon-community"></div>
+            <!--
+            <p>Get involved</p>
+          -->
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /home-icons -->
+  <h5 id="earlyaccess"><em class="highlight">Early Access enabled/installed</em></h5>
+  <div id="wizards" class="container-bg">
+    <div class="container">
+      <div class="row">
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- home -->
+  </div>
+  <!-- /container-bg -->
+
+  <script src="lib/jquery/js/jquery.min.js"></script>
+  <script src="lib/jquery-highlight/js/jquery.highlight.js"></script>
+  <script src="lib/twbs-pagination/js/jquery.twbsPagination.min.js"></script>
+  <script src="lib/bootstrap-sass-official/js/bootstrap.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <!--
+   <script src="../../src/scripts/main.js"></script>
+   -->
+</body>
+</html>

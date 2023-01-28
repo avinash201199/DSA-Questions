@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xi="http://www.w3.org/2001/XInclude"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+ <managed-bean>
+  <description>User Name Bean</description>
+  <managed-bean-name>user</managed-bean-name>
+  <managed-bean-class>demo.User</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+  <managed-property>
+   <property-name>name</property-name>
+   <property-class>java.lang.String</property-class>
+   <value/>
+  </managed-property>
+ </managed-bean>
+ <navigation-rule>
+  <from-view-id>/pages/inputUserName.jsp</from-view-id>
+  <navigation-case>
+   <from-outcome>hello</from-outcome>
+   <to-view-id>/pages/hello.jsp</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <application>
+  <locale-config/>
+ </application>
+ <factory/>
+ <lifecycle/>
+</faces-config>

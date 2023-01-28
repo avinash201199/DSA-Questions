@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+#if ($servlet_version == "2.4")
+<web-app version="2.4"
+xmlns="http://java.sun.com/xml/ns/j2ee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+#elseif ($servlet_version == "2.5") 
+<web-app version="2.5" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"> 
+#elseif ($servlet_version == "3.0") 
+<web-app version="3.0" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"> 
+#elseif ($servlet_version == "3.1") 
+<web-app version="3.1" 
+xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"> 
+#else
+<!DOCTYPE web-app PUBLIC
+  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+  "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+#end
+
+#if ($servlet_version == "2.4" || $servlet_version == "2.5")
+ <description>Facelets StarterKit</description>
+ <display-name>Facelets</display-name>
+#else
+ <display-name>Facelets</display-name>
+ <description>Facelets StarterKit</description>
+#end
+ <context-param>
+  <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+  <param-value>.xhtml</param-value>
+ </context-param>
+ <context-param>
+  <param-name>facelets.REFRESH_PERIOD</param-name>
+  <param-value>2</param-value>
+ </context-param>
+ <context-param>
+  <param-name>facelets.DEVELOPMENT</param-name>
+  <param-value>true</param-value>
+ </context-param>
+ <context-param>
+  <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+  <param-value>client</param-value>
+ </context-param>
+ <context-param>
+  <param-name>com.sun.faces.validateXml</param-name>
+  <param-value>true</param-value>
+ </context-param>
+ <context-param>
+  <param-name>com.sun.faces.verifyObjects</param-name>
+  <param-value>true</param-value>
+ </context-param>
+ <servlet>
+  <servlet-name>Faces Servlet</servlet-name>
+  <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+  <load-on-startup>1</load-on-startup>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Faces Servlet</servlet-name>
+  <url-pattern>*.jsf</url-pattern>
+ </servlet-mapping>
+</web-app>

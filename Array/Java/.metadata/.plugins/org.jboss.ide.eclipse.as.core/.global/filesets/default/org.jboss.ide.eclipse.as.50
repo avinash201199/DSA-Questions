@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<filesets>
+  <fileset excludes="" folder="${jboss_config_dir}/conf" includes="jboss-log4j.xml" name="Log4j.xml"/>
+</filesets>

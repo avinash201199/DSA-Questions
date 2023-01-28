@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://java.sun.com/jstl/sql">
+    <tag name="transaction"/>
+    <tag name="query"/>
+    <tag name="update"/>
+    <tag name="param"/>
+    <tag name="dateParam"/>
+    <tag name="setDataSource"/>
+  </taglib>
+</jsp-preview-template> 

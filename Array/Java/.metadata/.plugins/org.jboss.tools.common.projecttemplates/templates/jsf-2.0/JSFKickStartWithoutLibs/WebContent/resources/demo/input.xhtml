@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:composite="http://java.sun.com/jsf/composite">
+
+	<composite:interface>
+		<composite:attribute name="label"/>
+		<composite:attribute name="value" required="true"/>
+		<composite:attribute name="action" required="true" method-signature="java.lang.String f()"/>
+		<composite:attribute name="submitlabel"/>
+	</composite:interface>
+
+	<composite:implementation>
+    	<h:form>
+    		<h:outputText value="#{cc.attrs.label}" />
+    		<h:inputText value="#{cc.attrs.value}" />
+    		<h:commandButton action="#{cc.attrs.action}" value="#{cc.attrs.submitlabel}" />
+    	</h:form>
+	</composite:implementation>
+</html>

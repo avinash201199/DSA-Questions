@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://java.sun.com/jstl/xml">
+    <tag name="choose"/>
+    <tag name="out"/>
+    <tag name="if"/>
+    <tag name="forEach"/>
+    <tag name="otherwise"/>
+    <tag name="param"/>
+    <tag name="parse"/>
+    <tag name="set"/>
+    <tag name="transform"/>
+    <tag name="when"/>
+  </taglib>
+</jsp-preview-template> 
