@@ -1,0 +1,35 @@
+<versions> 
+ <version displayName="JSF 1.1.02 - Reference Implementation">
+  <lib type="core" location="../lib/ApacheCommon2.3" />
+  <refLib type="servlet" location="../servlet" />
+  <projectTempl location="./jsf-1.1" />
+ </version>
+ <version displayName="JSF 1.2" servlet-version="2.5">
+  <lib type="core" location="../lib/jsf-1.2"/>
+  <lib type="common" location="../lib/ApacheCommon2.3" />
+  <refLib type="servlet" location="../servlet" />
+  <projectTempl location="./jsf-1.2" />
+ </version>
+ <version displayName="JSF 1.2 with Facelets" servlet-version="2.5">
+  <lib type="core" location="../lib/jsf-1.2" />
+  <lib type="common" location="../lib/facelets" />
+  <lib type="common" location="../lib/ApacheCommon2.3" />
+  <refLib type="servlet" location="../servlet" />
+  <projectTempl location="./jsf-1.2-facelets" />
+ </version>
+ <version displayName="JSF 2.0" servlet-version="3.0" min-servlet-version="2.5">
+  <lib type="core" location="../lib/ApacheCommon2.3" />
+  <refLib type="servlet" location="../servlet" />
+  <projectTempl location="./jsf-2.0" />
+ </version>
+ <version displayName="JSF 2.1" servlet-version="3.0" min-servlet-version="2.5">
+  <lib type="core" location="../lib/ApacheCommon2.3" />
+  <refLib type="servlet" location="../servlet" />
+  <projectTempl location="./jsf-2.1" />
+ </version>
+ <version displayName="JSF 2.2" servlet-version="3.0" min-servlet-version="2.5">
+  <lib type="core" location="../lib/ApacheCommon2.3" />
+  <refLib type="servlet" location="../servlet" />
+  <projectTempl location="./jsf-2.2" />
+ </version>
+</versions>

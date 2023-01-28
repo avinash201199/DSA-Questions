@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xi="http://www.w3.org/2001/XInclude"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+ <managed-bean>
+  <managed-bean-name>person</managed-bean-name>
+  <managed-bean-class>demo.Person</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+  <managed-property>
+   <property-name>name</property-name>
+   <value/>
+  </managed-property>
+ </managed-bean>
+ <navigation-rule>
+  <from-view-id>/pages/inputname.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>greeting</from-outcome>
+   <to-view-id>/pages/greeting.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <application>
+  <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+  <locale-config/>
+ </application>
+ <factory/>
+ <lifecycle/>
+</faces-config>

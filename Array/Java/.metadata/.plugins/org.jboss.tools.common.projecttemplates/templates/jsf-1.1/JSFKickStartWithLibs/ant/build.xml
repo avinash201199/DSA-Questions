@@ -1,0 +1,74 @@
+<project name="KickStart" default="deploy" basedir="../">
+
+	<!-- Project settings -->
+	<property file="${basedir}/ant/build.properties" />
+
+	<property name="project.name" value="KickStart" />
+	<property name="web.content.dir" value="${basedir}/WebContent" />
+	<property name="web-inf.dir" value="${web.content.dir}/WEB-INF" />
+	<property name="build.dir" value="build" />
+	<property name="war.name" value="${build.dir}/${project.name}.war" />
+
+	<!-- Define a folder for deployment -->
+	<property name="deploy.dir" value="deploy" />
+
+	<!-- Compile classpath -->
+	<path id="compile.classpath">
+		<fileset dir="${webinf.dir}/lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<pathelement path="${classpath}" />
+		<pathelement path="${classpath.external}" />
+		<pathelement path="${webinf.dir}/classes" />
+	</path>
+
+	<!-- Copy any resource or configuration files -->
+	<target name="copyResources">
+		<copy todir="${web-inf.dir}/classes" includeEmptyDirs="no">
+			<fileset dir="JavaSource">
+				<patternset>
+					<include name="**/*.*" />
+					<exclude name="**/*.java" />
+				</patternset>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- Check timestamp on files -->
+	<target name="prepare">
+		<tstamp />
+	</target>
+
+	<!-- Remove classes directory for clean build -->
+	<target name="clean" description="Prepare for clean build">
+		<delete dir="${web-inf.dir}/classes" failonerror="false"/>
+		<mkdir dir="${web-inf.dir}/classes" />
+	</target>
+
+	<!-- Normal build of application -->
+	<target name="compile" depends="prepare, copyResources">
+		<javac srcdir="JavaSource" destdir="${web-inf.dir}/classes">
+			<classpath refid="compile.classpath" />
+		</javac>
+	</target>
+
+	<!-- Build Project -->
+	<target name="build" depends="prepare, compile" />
+
+	<!-- Rebuild Project -->
+	<target name="rebuild" depends="clean, prepare, compile" />
+
+	<!-- Build WAR -->
+	<target name="war" depends="build">
+		<mkdir dir="${build.dir}" />
+		<war warfile="${war.name}" basedir="${web.content.dir}" webxml="${web-inf.dir}/web.xml">
+			<exclude name="WEB-INF/web.xml" />
+		</war>
+	</target>
+
+	<target name="deploy" depends="war">
+		<delete dir="${deploy.dir}/${project.name}" failonerror="false"/>
+		<copy file="${war.name}" todir="${deploy.dir}" />
+	</target>
+
+</project>

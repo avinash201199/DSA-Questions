@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://struts.apache.org/tags-logic">
+    <tag name="forward">forward $tag.getAttribute('name')</tag>
+  </taglib>
+</jsp-preview-template> 

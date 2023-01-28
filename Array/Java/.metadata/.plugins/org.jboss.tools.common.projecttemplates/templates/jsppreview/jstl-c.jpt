@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://java.sun.com/jstl/core">
+    <tag name="catch"><![CDATA[$tag.processBody()]]></tag>
+    <tag name="choose"><![CDATA[$tag.processBody()]]></tag>
+    <tag name="if"><![CDATA[$tag.processBody()]]></tag>
+    <tag name="import"/>
+    <tag name="forEach"><![CDATA[
+#set ($body = $tag.processBody())
+#foreach($i in [1..3])
+$body
+#end
+]]></tag>
+    <tag name="forTokens"><![CDATA[
+#set ($body = $tag.processBody())
+#foreach($i in [1..3])
+$body
+#end
+]]></tag>
+    <tag name="out"/>
+    <tag name="otherwise"><![CDATA[$tag.processBody()]]></tag>
+    <tag name="param"/>
+    <tag name="redirect"/>
+    <tag name="remove"/>
+    <tag name="set"/>
+    <tag name="url"/>
+    <tag name="when"><![CDATA[$tag.processBody()]]></tag>
+  </taglib>
+</jsp-preview-template> 

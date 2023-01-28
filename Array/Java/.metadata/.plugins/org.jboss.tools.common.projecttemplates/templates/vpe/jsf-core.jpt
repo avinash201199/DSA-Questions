@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://java.sun.com/jsf/core">
+    <tag name="loadBundle"><![CDATA[<meta $tag.processAttributes()/>]]></tag>
+    <tag name="view"><![CDATA[<div style="-moz-user-modify: read-write; -moz-user-input: enabled; -moz-user-select: normal; -moz-outline: dotted red 1px;" $tag.processAttributes()>
+$tag.processBody()
+</div>]]></tag>
+    <tag name="attribute">$tag.processBody()</tag>
+    <tag name="subview">$tag.processBody()</tag>
+    <tag name="selectItems">
+    	<attribute name="binding" rename="value"/><![CDATA[
+<option $tag.processAttributes() selected>Item1</option>
+<option $tag.processAttributes()>Item2</option>
+<option $tag.processAttributes()>Item...</option>
+]]></tag>
+    <tag name="verbatim">$tag.processBody()</tag>
+    <tag name="loadBundle">
+    	<helper name="helper" className="org.jboss.tools.jst.jsp.preview.helper.f.LoadBundle"/><![CDATA[
+$helper.execute()
+]]></tag>
+  </taglib>
+</jsp-preview-template>
+

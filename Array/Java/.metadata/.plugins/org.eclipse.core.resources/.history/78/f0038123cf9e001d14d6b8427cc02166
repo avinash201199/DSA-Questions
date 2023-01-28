@@ -1,0 +1,38 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class PeakOfMountainArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<Integer> list = new ArrayList<Integer>(
+				Arrays.asList(1,2,3,4,5,4,3,2,1));
+		
+		int index = findPeak(list);
+		System.out.println("Peak: "+ index);
+	}
+
+	static int findPeak(ArrayList<Integer> list) {
+		int start = 0;
+		int end = list.size();
+		int mid = start + (end - start)/2;
+		
+		while(start <= end){
+			
+			if(list.get(mid) < list.get(mid+1)){
+				start = mid;
+			}
+			else if(list.get(mid) < list.get(mid-1)){
+				end = mid;
+			}
+			else{
+				return mid;
+			}
+		}
+		
+		return 0;
+	}
+
+}

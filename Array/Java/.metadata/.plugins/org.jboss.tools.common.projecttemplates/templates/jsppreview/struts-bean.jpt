@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://jakarta.apache.org/struts/tags-bean">
+    <tag name="cookie"/>
+    <tag name="define"/>
+    <tag name="header"/>
+    <tag name="include"/>
+    <tag name="message">$tag.getAttribute('key')</tag>
+    <tag name="page"/>
+    <tag name="parameter"/>
+    <tag name="resource"/>
+    <tag name="size"/>
+    <tag name="struts"/>
+    <tag name="write">${tag.getAttribute('name')}.$tag.getAttribute('property')</tag>
+  </taglib>
+</jsp-preview-template> 

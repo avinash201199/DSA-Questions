@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+	<navigation-rule>
+		<from-view-id>/pages/inputname.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>greeting</from-outcome>
+			<to-view-id>/pages/greeting.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+    <application>
+        <resource-bundle>
+            <base-name>resources</base-name>
+            <var>msgs</var>
+        </resource-bundle>
+    </application>
+</faces-config>

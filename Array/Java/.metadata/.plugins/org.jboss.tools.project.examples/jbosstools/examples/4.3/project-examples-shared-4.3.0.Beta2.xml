@@ -1,0 +1,312 @@
+<projects>
+  <!--
+    Beware : the project name MUST NOT be changed. It's referenced in JBoss Central
+    -->
+
+  <!-- Java EE Web Project -->
+  <project>
+    <category>JBoss Maven Archetypes</category>
+    <name>jboss-javaee6-webapp</name>
+    <included-projects>jboss-javaee6-webapp</included-projects>
+    <shortDescription>Java EE Web Project</shortDescription>
+    <priority>1</priority>
+    <headLine>Create a Maven-based Java EE web application project</headLine>
+    <description>
+      This is your project! It's a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE on JBoss Enterprise Application Platform 6, JBoss Application Server 7.1 or Wildfly 8.0. This project is setup to allow you to
+      create a compliant Java EE application leveraging JSF, CDI, EJB, JPA and Bean Validation frameworks.
+    </description>
+    <size>8192</size>
+    <url>http://www.jboss.org/get-started/</url>
+    <stacksId>jboss-javaee6-webapp-archetype</stacksId>
+    <stacksType>javaee-web</stacksType>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.70,org.jboss.ide.eclipse.as.runtime.wildfly.80,org.jboss.ide.eclipse.as.runtime.wildfly.90, org.jboss.ide.eclipse.as.runtime.wildfly.100</property>
+        <property name="description">This example runs on JBoss EAP 6, JBoss AS 7.1 or WildFly 8.x/9.x</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin" required="true">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[1.1,2.0)</property>
+        <property name="description">Requires m2e-wtp &gt;= 1.1.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.3.0,2.0.0)</property>
+        <property name="description">This example works best with JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+      </fix>
+    </fixes>
+    <importType>mavenArchetype</importType>
+    <importTypeDescription>The example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
+    <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
+    <mavenArchetype>
+      <groupId>org.jboss.tools.examples</groupId>
+      <artifactId>jboss-javaee-webapp</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <javaPackage>org.jboss.tools.examples</javaPackage>
+      <properties>
+        <property name="name" value="Java EE webapp project" />
+      </properties>
+    </mavenArchetype>
+    <tags>wizard</tags>
+    <icon path="icons/newwebprj_wiz.gif" />
+  </project>
+  <!-- Java EE EAR Project -->
+  <project>
+    <category>JBoss Maven Archetypes</category>
+    <name>multi-javaee6-archetype</name>
+    <included-projects>multi-javaee6-archetype</included-projects>
+    <shortDescription>Java EE EAR Project</shortDescription>
+    <priority>2</priority>
+    <headLine>Create a multi-module, Maven-based Java EE EAR application</headLine>
+    <description>An archetype that generates a starter Java EE webapp project for JBoss Enterprise Application Platform 6 or JBoss Application Server. The project is an EAR, with an EJB-JAR and WAR.</description>
+    <size>13806</size>
+    <url>http://www.jboss.org/get-started/</url>
+    <stacksId>jboss-javaee6-webapp-ear-archetype</stacksId>
+    <stacksType>javaee-ear</stacksType>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.70, org.jboss.ide.eclipse.as.runtime.wildfly.80,org.jboss.ide.eclipse.as.runtime.wildfly.90, org.jboss.ide.eclipse.as.runtime.wildfly.100</property>
+        <property name="description">Requires JBoss EAP 6, JBoss AS 7.1 or WildFly 8.x/9.x</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.5.0,2.0.0)</property>
+        <property name="description">Requires m2e &gt;= 1.5.</property>
+        <property name="connectorIds">org.eclipse.m2e.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[1.1,2.0)</property>
+        <property name="description">Requires m2e-wtp &gt;= 1.1.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.3.0,2.0.0)</property>
+        <property name="description">Requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+      </fix>
+    </fixes>
+    <importType>mavenArchetype</importType>
+    <importTypeDescription>The example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
+    <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
+    <mavenArchetype>
+      <groupId>org.jboss.tools.example</groupId>
+      <artifactId>jboss-javaee-multi</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <javaPackage>org.jboss.tools.example</javaPackage>
+    </mavenArchetype>
+    <tags>wizard</tags>
+    <icon path="icons/ear-wiz-icon.gif" />
+  </project>
+  <!-- HTML5 project  -->
+  <project>
+    <category>JBoss Maven Archetypes</category>
+    <name>jboss-javaee6-poh5-archetype</name>
+    <included-projects>jboss-javaee6-poh5</included-projects>
+    <shortDescription>HTML5 Project</shortDescription>
+    <priority>3</priority>
+    <headLine>Create a Java EE 6 HTML5 Mobile web application project</headLine>
+    <description>An archetype that generates a Java EE 6 HTML5 Mobile Webapp project for JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</description>
+    <size>165567</size>
+    <url>http://www.jboss.org/get-started/</url>
+    <stacksId>jboss-html5-mobile-archetype</stacksId>
+    <stacksType>html5-mobile</stacksType>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.70, org.jboss.ide.eclipse.as.runtime.wildfly.80,org.jboss.ide.eclipse.as.runtime.wildfly.90, org.jboss.ide.eclipse.as.runtime.wildfly.100</property>
+        <property name="description">Requires JBoss EAP 6, JBoss AS 7.1 or WildFly 8.x/9.x</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">Requires m2e &gt;= 1.0.</property>
+        <property name="connectorIds">org.eclipse.m2e.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[0.16,2.0)</property>
+        <property name="description">Requires m2e-wtp &gt;= 0.16.0.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.3.0,2.0.0)</property>
+        <property name="description">Requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+      </fix>
+    </fixes>
+    <importType>mavenArchetype</importType>
+    <importTypeDescription>The example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
+    <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
+    <mavenArchetype>
+      <groupId>org.jboss.tools.example</groupId>
+      <artifactId>jboss-as-kitchensink-html5-mobile</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <javaPackage>org.jboss.tools.example.html5</javaPackage>
+    </mavenArchetype>
+    <essentialEnterpriseDependencies>org.jboss.bom:jboss-javaee-6.0-with-tools:pom:1.0.4.Final-redhat-wfk-2,org.jboss.bom:jboss-javaee-6.0-with-hibernate:pom:1.0.4.Final-redhat-wfk-2</essentialEnterpriseDependencies>
+    <tags>wizard</tags>
+    <icon path="icons/html5.png" />
+  </project>
+  <!-- Richfaces project  -->
+  <project>
+    <category>JBoss Maven Archetypes</category>
+    <name>richfaces-archetype-simpleapp</name>
+    <included-projects>richfaces-archetype-simpleapp</included-projects>
+    <shortDescription>RichFaces Project</shortDescription>
+    <priority>4</priority>
+    <headLine>Create a Java EE 6 web application project based on Richfaces</headLine>
+    <description>An archetype that generates a simple Richfaces application</description>
+    <size>165567</size>
+    <url>http://www.jboss.org/get-started/</url>
+    <stacksId>richfaces-archetype-kitchensink</stacksId>
+    <stacksType>richfaces-kitchensink</stacksType>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.70, org.jboss.ide.eclipse.as.runtime.wildfly.80,org.jboss.ide.eclipse.as.runtime.wildfly.90, org.jboss.ide.eclipse.as.runtime.wildfly.100</property>
+        <property name="description">Requires JBoss EAP 6, JBoss AS 7.1 or WildFly 8.x/9.x</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">Requires m2e &gt;= 1.0.</property>
+        <property name="connectorIds">org.eclipse.m2e.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[0.16,2.0)</property>
+        <property name="description">Requires m2e-wtp &gt;= 0.16.0.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.3.0,2.0.0)</property>
+        <property name="description">Requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+      </fix>
+    </fixes>
+    <importType>mavenArchetype</importType>
+    <importTypeDescription>The example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
+    <defaultMavenProfiles>arq-jbossas-remote</defaultMavenProfiles>
+    <mavenArchetype>
+      <groupId>org.jboss.tools.example</groupId>
+      <artifactId>jboss-as-kitchensink-rf</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <javaPackage>org.jboss.tools.example.richfaces</javaPackage>
+    </mavenArchetype>
+    <tags>wizard</tags>
+    <icon path="icons/rf_logo.png" />
+  </project>
+  <!-- Spring MVC -->
+  <project>
+    <category>JBoss Maven Archetypes</category>
+    <name>spring-mvc-webapp</name>
+    <included-projects>spring-mvc-webapp</included-projects>
+    <shortDescription>Spring MVC Project</shortDescription>
+    <priority>5</priority>
+    <headLine>Create a Spring MVC web application project</headLine>
+    <description>An archetype that generates a starter Spring MVC application with Java EE persistence settings (server bootstrapped JPA, JTA transaction management) for JBoss Enterprise Application Platform 6 or JBoss Application Server 7.1</description>
+    <size>165567</size>
+    <url>http://www.jboss.org/get-started/</url>
+    <stacksId>spring-mvc-webapp</stacksId>
+    <stacksType>spring-kitchensink</stacksType>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.70, org.jboss.ide.eclipse.as.runtime.wildfly.80,org.jboss.ide.eclipse.as.runtime.wildfly.90, org.jboss.ide.eclipse.as.runtime.wildfly.100</property>
+        <property name="description">Requires JBoss EAP 6, JBoss AS 7.1 or WildFly 8.x/9.x</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">Requires m2e &gt;= 1.0.</property>
+        <property name="connectorIds">org.eclipse.m2e.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[0.16,2.0)</property>
+        <property name="description">Requires m2e-wtp &gt;= 0.16.0.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.3.0,2.0.0)</property>
+        <property name="description">Requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.hibernate.feature</property>
+      </fix>
+    </fixes>
+    <importType>mavenArchetype</importType>
+    <importTypeDescription>The example requires the m2e, m2e-wtp and JBoss Maven Integration features.</importTypeDescription>
+    <mavenArchetype>
+      <artifactId>jboss-springmvc-webapp</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <javaPackage>org.jboss.tools.example.springmvc</javaPackage>
+    </mavenArchetype>
+    <tags>wizard</tags>
+    <icon path="icons/spring_wiz.gif" />
+  </project>
+  <project>
+    <category>JBoss Maven Archetypes</category>
+    <name>jboss-forge-html5-archetype</name>
+    <included-projects>jboss-forge-html5-archetype</included-projects>
+    <shortDescription>AngularJS Forge Project</shortDescription>
+    <priority>3</priority>
+    <headLine>Create a modern Java EE 6 + HTML5 web application project with JBoss Forge</headLine>
+    <description>This project is a sample project that will show how to build an JavaEE application with AngularJS, HTML5 and Bootstrap 3 by using JBoss Forge. The application is deployable to JBoss Enterprise Platform 6 or JBoss Application Server 7.1 or higher.</description>
+    <size>165567</size>
+    <url>http://www.jboss.org/get-started/</url>
+    <fixes>
+      <fix type="wtpruntime">
+        <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.60, org.jboss.ide.eclipse.as.runtime.eap.61, org.jboss.ide.eclipse.as.runtime.eap.70, org.jboss.ide.eclipse.as.runtime.wildfly.80,org.jboss.ide.eclipse.as.runtime.wildfly.90, org.jboss.ide.eclipse.as.runtime.wildfly.100</property>
+        <property name="description">Requires JBoss EAP 6, JBoss AS 7.1 or WildFly 8.x/9.x</property>
+        <property name="downloadId">org.jboss.tools.runtime.core.as.711</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.core</property>
+        <property name="versions">[1.0.0,2.0.0)</property>
+        <property name="description">Requires JBoss Tools Forge &gt;= 1.5.</property>
+        <property name="connectorIds">forge-tools-feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.eclipse.m2e.wtp</property>
+        <property name="versions">[0.16,2.0)</property>
+        <property name="description">Requires m2e-wtp &gt;= 1.1.0.</property>
+        <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+      </fix>
+      <fix type="plugin">
+        <property name="id">org.jboss.tools.maven.core</property>
+        <property name="versions">[1.3.0,2.0.0)</property>
+        <property name="description">Requires JBoss Maven Tools.</property>
+        <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature</property>
+      </fix>
+
+      <fix type="plugin">
+        <property name="id">org.eclipse.angularjs.core</property>
+        <property name="versions">0.4</property>
+        <property name="description">Requires AngularJS Eclipse.</property>
+        <property name="connectorIds">angularjs-eclipse-feature</property>
+      </fix>
+    </fixes>
+    <importType>mavenArchetype</importType>
+    <importTypeDescription>The example requires JBoss Forge tools, m2e-wtp, JBoss Maven Integration and AngularJS Eclipse features.</importTypeDescription>
+    <defaultMavenProfiles></defaultMavenProfiles>
+    <mavenArchetype>
+      <archetypeGroupId>org.jboss.tools.archetypes</archetypeGroupId>
+      <archetypeArtifactId>jboss-forge-html5</archetypeArtifactId>
+      <archetypeVersion>1.0.0-SNAPSHOT</archetypeVersion>
+      <archetypeRepository>https://repository.jboss.org/nexus/content/repositories/snapshots/</archetypeRepository>
+      <groupId>org.jboss.tools.example</groupId>
+      <artifactId>jboss-forge-html5</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <javaPackage>org.jboss.tools.example.forge</javaPackage>
+    </mavenArchetype>
+    <tags>wizard</tags>
+  </project>
+</projects>

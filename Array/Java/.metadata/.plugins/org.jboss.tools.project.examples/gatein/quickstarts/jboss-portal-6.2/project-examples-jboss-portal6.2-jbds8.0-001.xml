@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    JBoss, Home of Professional Open Source
+    Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
+    contributors by the @authors tag. See the copyright.txt in the
+    distribution for a full listing of individual contributors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+ -->
+<!-- Generated on 2013-10-25 12:17:26+0200, edited 2014-10-13 -->
+<projects>
+<!-- Beware that this file is handled by Maven during the build.
+     The text content of the following elements is overwritten (or added) by Maven, the new values being taken form the
+     respective sub-project's pom.xml:
+     - category
+     - included-projects
+     - shortDescription
+     - description
+     - size
+     - url
+ -->
+    <project>
+        <category>Portal Applications</category>
+        <name>jpp6-simplest-hello-world-portlet</name>
+        <priority>1</priority>
+        <included-projects>simplest-hello-world-portlet</included-projects>
+        <shortDescription>Simplest Hello World Portlet</shortDescription>
+        <description>JPP 6: The very essence of every possible portlet.</description>
+        <size>14115</size>
+        <url>http://download.jboss.org/gatein/quickstarts/jpp-6.1/simplest-hello-world-portlet.zip</url>
+        <fixes>
+            <fix type="wtpruntime">
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.60{JPP:6.0},org.jboss.ide.eclipse.as.runtime.eap.61{JPP:6.1}</property>
+                <property name="description">This project example requires JBoss Portal Platform 6.0 or higher with the same major version.</property>
+                <!-- <property name="downloadId">org.jboss.tools.runtime.core.as.711</property> -->
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.core</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">m2e &gt;= 1.0</property>
+                <property name="connectorIds">org.eclipse.m2e.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.wtp</property>
+                <property name="versions">[0.16,2.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.jboss.tools.maven.core</property>
+                <property name="versions">[1.3.0,2.0)</property>
+                <property name="description">JBoss Maven Tools</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature,org.jboss.tools.maven.portlet.feature
+                </property>
+            </fix>
+        </fixes>
+        <importType>maven</importType>
+        <importTypeDescription>The project example requires the m2eclipse, m2e-wtp and JBoss Maven Project Examples
+            feature.
+        </importTypeDescription>
+        <tags>central</tags>
+        <icon path="icons/gatein.png"/>
+    </project>
+    <project>
+        <category>Portal Applications</category>
+        <name>jpp6-jsf2-hello-world-portlet</name>
+        <priority>1</priority>
+        <included-projects>jsf2-hello-world-portlet</included-projects>
+        <shortDescription>JSF2 Hello World Portlet</shortDescription>
+        <description>JPP 6: A simple portlet using JavaServer Faces 2.</description>
+        <size>34555</size>
+        <url>http://download.jboss.org/gatein/quickstarts/jpp-6.1/jsf2-hello-world-portlet.zip</url>
+        <fixes>
+            <fix type="wtpruntime">
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.60{JPP:6.0},org.jboss.ide.eclipse.as.runtime.eap.61{JPP:6.1}</property>
+                <property name="description">This project example requires JBoss Portal Platform 6.0 or higher with the same major version.</property>
+                <!-- <property name="downloadId">org.jboss.tools.runtime.core.as.711</property> -->
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.core</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">m2e &gt;= 1.0</property>
+                <property name="connectorIds">org.eclipse.m2e.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.wtp</property>
+                <property name="versions">[0.16,2.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.jboss.tools.maven.core</property>
+                <property name="versions">[1.3.0,2.0)</property>
+                <property name="description">JBoss Maven Tools</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature,org.jboss.tools.maven.portlet.feature
+                </property>
+            </fix>
+        </fixes>
+        <importType>maven</importType>
+        <importTypeDescription>The project example requires the m2eclipse, m2e-wtp and JBoss Maven Project Examples
+            feature.
+        </importTypeDescription>
+        <tags>central</tags>
+        <icon path="icons/gatein.png"/>
+    </project>
+    <project>
+        <category>Portal Applications</category>
+        <name>jpp6-jsf2-rf4-hello-world-portlet</name>
+        <priority>1</priority>
+        <included-projects>jsf2-rf4-hello-world-portlet</included-projects>
+        <shortDescription>JSF2+RF4 Hello World Portlet</shortDescription>
+        <description>JPP 6: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.</description>
+        <size>34922</size>
+        <url>http://download.jboss.org/gatein/quickstarts/jpp-6.1/jsf2-rf4-hello-world-portlet.zip</url>
+        <fixes>
+            <fix type="wtpruntime">
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.60{JPP:6.0},org.jboss.ide.eclipse.as.runtime.eap.61{JPP:6.1}</property>
+                <property name="description">This project example requires JBoss Portal Platform 6.0 or higher with the same major version.</property>
+                <!-- <property name="downloadId">org.jboss.tools.runtime.core.as.711</property> -->
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.core</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">m2e &gt;= 1.0</property>
+                <property name="connectorIds">org.eclipse.m2e.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.wtp</property>
+                <property name="versions">[0.16,2.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.jboss.tools.maven.core</property>
+                <property name="versions">[1.3.0,2.0)</property>
+                <property name="description">JBoss Maven Tools</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature,org.jboss.tools.maven.portlet.feature
+                </property>
+            </fix>
+        </fixes>
+        <importType>maven</importType>
+        <importTypeDescription>The project example requires the m2eclipse, m2e-wtp and JBoss Maven Project Examples
+            feature.
+        </importTypeDescription>
+        <tags>central</tags>
+        <icon path="icons/gatein.png"/>
+    </project>
+    <project>
+        <category>Portal Applications</category>
+        <name>jpp6-navigation-api-portlet</name>
+        <priority>1</priority>
+        <included-projects>navigation-api-portlet</included-projects>
+        <shortDescription>Navigation API Portlet</shortDescription>
+        <description>JPP 6: The simple navigation portlet using Portal API.</description>
+        <size>27033</size>
+        <url>http://download.jboss.org/gatein/quickstarts/jpp-6.1/navigation-api-portlet.zip</url>
+        <fixes>
+            <fix type="wtpruntime">
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.61{JPP:6.1}</property>
+                <property name="description">This project example requires JBoss Portal Platform 6.1 or higher with the same major version.</property>
+                <!-- <property name="downloadId">org.jboss.tools.runtime.core.as.711</property> -->
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.core</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">m2e &gt;= 1.0</property>
+                <property name="connectorIds">org.eclipse.m2e.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.wtp</property>
+                <property name="versions">[0.16,2.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.jboss.tools.maven.core</property>
+                <property name="versions">[1.3.0,2.0)</property>
+                <property name="description">JBoss Maven Tools</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature,org.jboss.tools.maven.portlet.feature
+                </property>
+            </fix>
+        </fixes>
+        <importType>maven</importType>
+        <importTypeDescription>The project example requires the m2eclipse, m2e-wtp and JBoss Maven Project Examples
+            feature.
+        </importTypeDescription>
+        <tags>central</tags>
+        <icon path="icons/gatein.png"/>
+    </project>
+    <project>
+        <category>Portal Applications</category>
+        <name>jpp6-cdi-generic-portlet</name>
+        <priority>1</priority>
+        <included-projects>cdi-generic-portlet</included-projects>
+        <shortDescription>CDI Generic Portlet</shortDescription>
+        <description>JPP 6: An application that demonstrates use of CDI in a portlet.</description>
+        <size>17424</size>
+        <url>http://download.jboss.org/gatein/quickstarts/jpp-6.1/cdi-generic-portlet.zip</url>
+        <fixes>
+            <fix type="wtpruntime">
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.61{JPP:6.1}</property>
+                <property name="description">This project example requires JBoss Portal Platform 6.1 or higher with the same major version.</property>
+                <!-- <property name="downloadId">org.jboss.tools.runtime.core.as.711</property> -->
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.core</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">m2e &gt;= 1.0</property>
+                <property name="connectorIds">org.eclipse.m2e.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.wtp</property>
+                <property name="versions">[0.16,2.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.jboss.tools.maven.core</property>
+                <property name="versions">[1.3.0,2.0)</property>
+                <property name="description">JBoss Maven Tools</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature,org.jboss.tools.maven.portlet.feature
+                </property>
+            </fix>
+        </fixes>
+        <importType>maven</importType>
+        <importTypeDescription>The project example requires the m2eclipse, m2e-wtp and JBoss Maven Project Examples
+            feature.
+        </importTypeDescription>
+        <tags>central</tags>
+        <icon path="icons/gatein.png"/>
+    </project>
+    <project>
+        <category>Portal Applications</category>
+        <name>jpp6-cdi-jsf-portlet</name>
+        <priority>1</priority>
+        <included-projects>cdi-jsf-portlet</included-projects>
+        <shortDescription>CDI Portlet with JSF</shortDescription>
+        <description>JPP 6: An application that demonstrates use of JSF 2 RI and CDI in a portlet</description>
+        <size>22278</size>
+        <url>http://download.jboss.org/gatein/quickstarts/jpp-6.1/cdi-jsf-portlet.zip</url>
+        <fixes>
+            <fix type="wtpruntime">
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.61{JPP:6.1}</property>
+                <property name="description">This project example requires JBoss Portal Platform 6.1 or higher with the same major version.</property>
+                <!-- <property name="downloadId">org.jboss.tools.runtime.core.as.711</property> -->
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.core</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">m2e &gt;= 1.0</property>
+                <property name="connectorIds">org.eclipse.m2e.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.wtp</property>
+                <property name="versions">[0.16,2.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.jboss.tools.maven.core</property>
+                <property name="versions">[1.3.0,2.0)</property>
+                <property name="description">JBoss Maven Tools</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature,org.jboss.tools.maven.portlet.feature
+                </property>
+            </fix>
+        </fixes>
+        <importType>maven</importType>
+        <importTypeDescription>The project example requires the m2eclipse, m2e-wtp and JBoss Maven Project Examples
+            feature.
+        </importTypeDescription>
+        <tags>central</tags>
+        <icon path="icons/gatein.png"/>
+    </project>
+    <project>
+        <category>Portal Applications</category>
+        <name>jpp6-cdi-scopes-portlet</name>
+        <priority>1</priority>
+        <included-projects>cdi-scopes-portlet</included-projects>
+        <shortDescription>Portlet Using Portet-Specific CDI Scopes</shortDescription>
+        <description>JPP 6: Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.</description>
+        <size>22115</size>
+        <url>http://download.jboss.org/gatein/quickstarts/jpp-6.1/cdi-scopes-portlet.zip</url>
+        <fixes>
+            <fix type="wtpruntime">
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.61{JPP:6.1}</property>
+                <property name="description">This project example requires JBoss Portal Platform 6.1 or higher with the same major version.</property>
+                <!-- <property name="downloadId">org.jboss.tools.runtime.core.as.711</property> -->
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.core</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">m2e &gt;= 1.0</property>
+                <property name="connectorIds">org.eclipse.m2e.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.wtp</property>
+                <property name="versions">[0.16,2.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.jboss.tools.maven.core</property>
+                <property name="versions">[1.3.0,2.0)</property>
+                <property name="description">JBoss Maven Tools</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature,org.jboss.tools.maven.portlet.feature
+                </property>
+            </fix>
+        </fixes>
+        <importType>maven</importType>
+        <importTypeDescription>The project example requires the m2eclipse, m2e-wtp and JBoss Maven Project Examples
+            feature.
+        </importTypeDescription>
+        <tags>central</tags>
+        <icon path="icons/gatein.png"/>
+    </project>
+    <project>
+        <category>Portal Applications</category>
+        <name>jpp6-social-portlets</name>
+        <priority>1</priority>
+        <included-projects>social-portlets</included-projects>
+        <shortDescription>Social Portlets</shortDescription>
+        <description>JPP 6: Portlets showing integration with Social networks</description>
+        <size>83338</size>
+        <url>http://download.jboss.org/gatein/quickstarts/jpp-6.1/social-portlets.zip</url>
+        <fixes>
+            <fix type="wtpruntime">
+                <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.eap.61{JPP:6.1}</property>
+                <property name="description">This project example requires JBoss Portal Platform 6.1 or higher with the same major version.</property>
+                <!-- <property name="downloadId">org.jboss.tools.runtime.core.as.711</property> -->
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.core</property>
+                <property name="versions">[1.0.0,2.0.0)</property>
+                <property name="description">m2e &gt;= 1.0</property>
+                <property name="connectorIds">org.eclipse.m2e.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.eclipse.m2e.wtp</property>
+                <property name="versions">[0.16,2.0)</property>
+                <property name="description">This project example requires m2e-wtp &gt;= 0.16.0.</property>
+                <property name="connectorIds">org.maven.ide.eclipse.wtp.feature</property>
+            </fix>
+            <fix type="plugin">
+                <property name="id">org.jboss.tools.maven.core</property>
+                <property name="versions">[1.3.0,2.0)</property>
+                <property name="description">JBoss Maven Tools</property>
+                <property name="connectorIds">org.jboss.tools.maven.feature,org.jboss.tools.maven.cdi.feature,org.jboss.tools.maven.hibernate.feature,org.jboss.tools.maven.jaxrs.feature,org.jboss.tools.maven.portlet.feature
+                </property>
+            </fix>
+        </fixes>
+        <importType>maven</importType>
+        <importTypeDescription>The project example requires the m2eclipse, m2e-wtp and JBoss Maven Project Examples
+            feature.
+        </importTypeDescription>
+        <tags>central</tags>
+        <icon path="icons/gatein.png"/>
+    </project>
+    
+    
+</projects>

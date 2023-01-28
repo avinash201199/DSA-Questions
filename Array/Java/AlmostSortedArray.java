@@ -19,9 +19,9 @@ be smaller than mid element.
 
 */
 
-import java.util.*;
 
-class HacktoberFest
+
+ class HacktoberFest
 {
     int binarySearch(int A[], int l, int r, int x)
     {
@@ -37,7 +37,7 @@ class HacktoberFest
                 return (mid + 1);
  
             if (A[mid] > x)
-                return binarySearch(A);
+                return binarySearch(A, l, r, x);
  
             return binarySearch(A, mid + 2, r, x);
         }
@@ -51,9 +51,9 @@ class HacktoberFest
     {
         HacktoberFest ob = new HacktoberFest();
         int A[] = {31, 21, 101, 41, 401};
-        int n = arr.length;
+        int n = A.length;
         int x = 4;
-        int result = ob.binarySearch(arr, 0, n - 1, x);
+        int result = ob.binarySearch(A, 0, n - 1, x);
         if(result == -1)
             System.out.println("Element not present");
         else

@@ -1,0 +1,149 @@
+<tms>
+<!-- ###################### HTML MAPPING ###################### -->
+
+	<tm name="object" start="" body="" end=""/>
+	<tm name="img" start="img" body="" end="">
+		<am name="src" target="src" pattern="s/^..\///"/> 
+	</tm>
+	<tm name="input" start="input" body="" end="">
+		<am name="src" target="src" pattern="s/^..\///"/> 
+	</tm>
+
+<!-- ###################### USER DEFINED ###################### -->
+
+	<tm name="app:linkSubscription" start="a" body="${body}" end="a">
+		<am name="page" target="href" pattern="s/^\///"/> 
+		<am name="forward" target="href" pattern="s/^\///"/> 
+	</tm>
+
+<!-- ######################### STRUTS ######################### -->
+
+	<tm name="html:button" start="input type='button' value='${body}'" body="" end=""/>
+	<tm name="html:cancel" start="input type='button' name='Cancel' value='${body}'" body="" end=""/>
+	<tm name="html:checkbox" start="input type='checkbox'" body="" end=""/>
+	<tm name="html:errors" start="" body="${body}" end=""/>
+	<tm name="html:file" start="input type='file'" body="" end=""/>
+	<tm name="html:form" start="form" body="${body}" end="form"/>
+	<tm name="html:frame" start="frame" body="${body}" end="frame"/>
+	<tm name="html:hidden" start="input type='hidden'" body="" end=""/>
+	<tm name="html:html" start="html" body="${body}" end="html"/>
+	<tm name="html:image" start="img" body="" end="">
+		<am name="page" target="src" pattern="s/^\///"/> 
+	</tm>
+	<tm name="html:img" start="img" body="" end=""> 
+		<am name="page" target="src" pattern="s/^\///"/> 
+	</tm>
+	<tm name="html:javascript" start="" body="" end=""/>
+	<tm name="html:link" start="a" body="${body}" end="a">
+		<am name="page" target="href" pattern="s/^\///"/> 
+		<am name="forward" target="href" pattern="s/^\///"/> 
+	</tm>
+	<tm name="html:messages" start="" body="messages" end=""/>
+	<tm name="html:multibox" start="input type='checkbox'" body="" end=""/>
+	<tm name="html:option" start="option" body="${a.property}" end="option"/>
+	<tm name="html:options" start="option" body="${a.property} collection" end="option"/>
+	<tm name="html:optionsCollection" start="" body="" end=""/>
+	<tm name="html:password" start="input type='password' value='${body}'" body="" end=""/>
+	<tm name="html:radio" start="input type='radio'" body="" end=""/>
+	<tm name="html:reset" start="input type='reset' value='${body}'" body="" end=""/>
+	<tm name="html:rewrite" start="" body="" end=""/>
+	<tm name="html:select" start="select" body="${body}" end="select"/>
+	<tm name="html:submit" start="input type='submit' value='${body}'" body="" end=""/>
+	<tm name="html:text" start="input type='text'" body="" end=""/>
+	<tm name="html:textarea" start="textarea" body="${body}" end="textarea"/>
+	<tm name="html:xhtml" start="xhtml" body="${body}" end="xhtml"/>
+
+	<tm name="bean:cookie" start="" body="" end=""/>
+	<tm name="bean:define" start="" body="" end=""/>
+	<tm name="bean:header" start="" body="" end=""/>
+	<tm name="bean:include" start="" body="" end=""/>
+	<tm name="bean:message" start="" body="${a.key}" end=""/>
+	<tm name="bean:page" start="" body="" end=""/>
+	<tm name="bean:parameter" start="" body="" end=""/>
+	<tm name="bean:resource" start="" body="" end=""/>
+	<tm name="bean:size" start="" body="" end=""/>
+	<tm name="bean:struts" start="" body="" end=""/>
+	<tm name="bean:write" start="" body="${a.name}.${a.property}" end=""/>
+
+	<tm name="logic:forward" start="" body="forward ${a.name}" end=""/>
+
+	<tm name="nested:message" start="" body="${a.key}" end=""/>
+	<tm name="nested:write" start="" body="${a.name}.${a.property}" end=""/>
+	<tm name="nested:checkbox" start="input type='checkbox'" body="" end=""/>
+	<tm name="nested:errors" start="" body="${body}" end=""/>
+	<tm name="nested:file" start="input type='file'" body="" end=""/>
+	<tm name="nested:form" start="form" body="${body}" end="form"/>
+	<tm name="nested:hidden" start="input type='hidden'" body="" end=""/>
+	<tm name="nested:image" start="img" body="" end="">
+		<am name="page" target="src" pattern="s/^\///"/> 
+	</tm>
+	<tm name="nested:img" start="img" body="" end=""> 
+		<am name="page" target="src" pattern="s/^\///"/> 
+	</tm>
+	<tm name="nested:link" start="a" body="${body}" end="a">
+		<am name="page" target="href" pattern="s/^\///"/> 
+		<am name="forward" target="href" pattern="s/^\///"/> 
+	</tm>
+	<tm name="nested:messages" start="" body="messages" end=""/>
+	<tm name="nested:multibox" start="input type='checkbox'" body="" end=""/>
+	<tm name="nested:options" start="option" body="${a.property} collection" end="option"/>
+	<tm name="nested:optionsCollection" start="option" body="${a.property} collection" end="option"/>
+	<tm name="nested:password" start="input type='password' value='${body}'" body="" end=""/>
+	<tm name="nested:radio" start="input type='radio'" body="" end=""/>
+	<tm name="nested:select" start="select" body="${body}" end="select"/>
+	<tm name="nested:submit" start="input type='submit' value='${body}'" body="" end=""/>
+	<tm name="nested:text" start="input type='text'" body="" end=""/>
+	<tm name="nested:textarea" start="textarea" body="${body}" end="textarea"/>
+
+	<tm name="template:insert" start="" body="" end=""/>
+	<tm name="template:put" start="" body="" end=""/>
+	<tm name="template:get" start="" body="" end=""/>
+
+<!-- ######################### JSTL ######################### -->
+
+	<tm name="c:catch" start="" body="" end=""/>
+	<tm name="c:choose" start="" body="" end=""/>
+	<tm name="c:if" start="" body="" end=""/>
+	<tm name="c:import" start="" body="" end=""/>
+	<tm name="c:forEach" start="" body="" end=""/>
+	<tm name="c:forTokens" start="" body="" end=""/>
+	<tm name="c:out" start="" body="" end=""/>
+	<tm name="c:otherwise" start="" body="" end=""/>
+	<tm name="c:param" start="" body="" end=""/>
+	<tm name="c:redirect" start="" body="" end=""/>
+	<tm name="c:remove" start="" body="" end=""/>
+	<tm name="c:set" start="" body="" end=""/>
+	<tm name="c:url" start="" body="" end=""/>
+	<tm name="c:when" start="" body="" end=""/>
+
+	<tm name="fmt:requestEncoding" start="" body="" end=""/>
+	<tm name="fmt:setLocale" start="" body="" end=""/>
+	<tm name="fmt:timeZone" start="" body="" end=""/>
+	<tm name="fmt:setTimeZone" start="" body="" end=""/>
+	<tm name="fmt:bundle" start="" body="" end=""/>
+	<tm name="fmt:setBundle" start="" body="" end=""/>
+	<tm name="fmt:message" start="" body="" end=""/>
+	<tm name="fmt:param" start="" body="" end=""/>
+	<tm name="fmt:formatNumber" start="" body="" end=""/>
+	<tm name="fmt:parseNumber" start="" body="" end=""/>
+	<tm name="fmt:formatDate" start="" body="" end=""/>
+	<tm name="fmt:parseDate" start="" body="" end=""/>
+
+	<tm name="sql:transaction" start="" body="" end=""/>
+	<tm name="sql:query" start="" body="" end=""/>
+	<tm name="sql:update" start="" body="" end=""/>
+	<tm name="sql:param" start="" body="" end=""/>
+	<tm name="sql:dateParam" start="" body="" end=""/>
+	<tm name="sql:setDataSource" start="" body="" end=""/>
+
+	<tm name="x:choose" start="" body="" end=""/>
+	<tm name="x:out" start="" body="" end=""/>
+	<tm name="x:if" start="" body="" end=""/>
+	<tm name="x:forEach" start="" body="" end=""/>
+	<tm name="x:otherwise" start="" body="" end=""/>
+	<tm name="x:param" start="" body="" end=""/>
+	<tm name="x:parse" start="" body="" end=""/>
+	<tm name="x:set" start="" body="" end=""/>
+	<tm name="x:transform" start="" body="" end=""/>
+	<tm name="x:when" start="" body="" end=""/>
+</tms>

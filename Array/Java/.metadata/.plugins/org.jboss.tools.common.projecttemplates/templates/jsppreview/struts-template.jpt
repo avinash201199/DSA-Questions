@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp-preview-template>
+  <taglib uri="http://jakarta.apache.org/struts/tags-template">
+    <tag name="insert"/>
+    <tag name="put"/>
+    <tag name="get"/>
+  </taglib>
+</jsp-preview-template> 
