@@ -1,0 +1,115 @@
+#include <iostream>
+#include <fstream>
+
+#define MAX 5
+
+class Queue {
+private:
+    int q[MAX];  // Array to hold queue elements
+    int front;   // Index of the front element
+    int rear;    // Index of the rear element
+    std::string filename; // Name of the binary file
+
+public:
+    Queue(std::string fname) : front(-1), rear(-1), filename(fname) {}
+
+    void enqueue(int value);
+    void dequeue();
+    void display();
+    void loadQueue(); // Load queue from file
+    void saveQueue(); // Save queue to file
+};
+
+void Queue::enqueue(int value) {
+    if ((front == 0 && rear == MAX - 1) || (rear + 1 == front)) {
+        std::cout << "Queue is full.\n";
+        return;
+    }
+    if (front == -1) { // If queue is empty
+        front = 0;
+        rear = 0;
+    } else {
+        rear = (rear + 1) % MAX; // Circular increment
+    }
+    q[rear] = value;
+    saveQueue(); // Save the updated queue to file
+    std::cout << value << " enqueued to the queue.\n";
+}
+
+void Queue::dequeue() {
+    if (front == -1) {
+        std::cout << "Queue is empty.\n";
+        return;
+    }
+    std::cout << q[front] << " dequeued from the queue.\n";
+    if (front == rear) { // If queue has only one element
+        front = rear = -1; // Reset the queue
+    } else {
+        front = (front + 1) % MAX; // Circular increment
+    }
+    saveQueue(); // Save the updated queue to file
+}
+
+void Queue::display() {
+    if (front == -1) {
+        std::cout << "Queue is empty.\n";
+        return;
+    }
+    std::cout << "Queue elements: ";
+    for (int i = front; i != rear; i = (i + 1) % MAX) {
+        std::cout << q[i] << " ";
+    }
+    std::cout << q[rear] << "\n"; // Display the rear element
+}
+
+void Queue::loadQueue() {
+    std::ifstream infile(filename, std::ios::binary);
+    if (infile.is_open()) {
+        infile.read(reinterpret_cast<char*>(&front), sizeof(front));
+        infile.read(reinterpret_cast<char*>(&rear), sizeof(rear));
+        infile.read(reinterpret_cast<char*>(q), sizeof(q));
+        infile.close();
+    }
+}
+
+void Queue::saveQueue() {
+    std::ofstream outfile(filename, std::ios::binary);
+    if (outfile.is_open()) {
+        outfile.write(reinterpret_cast<char*>(&front), sizeof(front));
+        outfile.write(reinterpret_cast<char*>(&rear), sizeof(rear));
+        outfile.write(reinterpret_cast<char*>(q), sizeof(q));
+        outfile.close();
+    }
+}
+
+int main() {
+    Queue queue("queue_data.bin");
+    queue.loadQueue(); // Load the queue from the binary file
+
+    int choice, value;
+    do {
+        std::cout << "1. Enqueue\n2. Dequeue\n3. Display\n4. Exit\n";
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
+        switch (choice) {
+            case 1:
+                std::cout << "Enter value to enqueue: ";
+                std::cin >> value;
+                queue.enqueue(value);
+                break;
+            case 2:
+                queue.dequeue();
+                break;
+            case 3:
+                queue.display();
+                break;
+            case 4:
+                std::cout << "Exiting...\n";
+                break;
+            default:
+                std::cout << "Invalid choice. Please try again.\n";
+        }
+    } while (choice != 4);
+
+    return 0;
+}
